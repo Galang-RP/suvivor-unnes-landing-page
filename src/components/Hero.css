@@ -44,3 +44,32 @@
  .hero-ticker-group { min-width: 0; width: 100%; flex-wrap: wrap; white-space: normal; text-align: center; }
  .hero-ticker-group[aria-hidden="true"], .hero-ticker-toggle { display: none; }
 }
+
+/* Ambient flight instruments sit behind the content, without capturing input. */
+.hero { isolation: isolate; overflow: hidden; }
+.hero-container { position: relative; z-index: 1; }
+.hero-atmosphere { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.hero-radar { position: absolute; width: min(62vw, 780px); aspect-ratio: 1; right: -12%; top: 20px; border: 1px solid #faca4214; border-radius: 50%; opacity: .65; }
+.hero-radar i { position: absolute; inset: 16%; border: 1px solid #faca4220; border-radius: 50%; }
+.hero-radar i:nth-child(2) { inset: 32%; }
+.hero-radar i:nth-child(3) { inset: 47%; background: #faca4220; }
+.hero-radar span { position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0deg 280deg, #faca420d 325deg, #faca4226 359deg, transparent 360deg); animation: hero-radar-sweep 22s linear infinite; }
+.hero-scan { position: absolute; top: 0; left: 0; right: 0; height: 120px; background: linear-gradient(transparent, #faca4205 90%, #faca4218); animation: hero-scan-drift 16s ease-in-out infinite alternate; }
+.hero-signal { position: absolute; width: 5px; height: 5px; background: #faca42; border-radius: 50%; box-shadow: 0 0 16px #faca4255; animation: hero-signal-drift 12s ease-in-out infinite alternate; }
+.hero-signal::after { content: ''; position: absolute; inset: -9px; border: 1px solid #faca4238; border-radius: 50%; }
+.hero-signal-one { right: 22%; top: 15%; opacity: .35; }
+.hero-signal-two { right: 8%; top: 38%; opacity: .2; animation-delay: -6s; }
+.hero-flight-path { position: absolute; width: 480px; height: 480px; right: -160px; top: 260px; border: 1px dashed #faca421a; border-radius: 50%; animation: hero-radar-sweep 70s linear infinite reverse; }
+@keyframes hero-radar-sweep { to { transform: rotate(360deg); } }
+@keyframes hero-scan-drift { from { transform: translateY(-120px); } to { transform: translateY(650px); } }
+@keyframes hero-signal-drift { from { transform: translate(0, 0); } to { transform: translate(-32px, 24px); } }
+@media(max-width:640px) {
+ .hero-radar { width: 380px; right: -240px; top: 48px; opacity: .4; }
+ .hero-scan { opacity: .5; animation-duration: 22s; }
+ .hero-flight-path, .hero-signal-two { display: none; }
+ .hero-signal-one { right: 12%; top: 8%; }
+}
+@media(prefers-reduced-motion: reduce) {
+ .hero-atmosphere * { animation: none; }
+ .hero-scan { display: none; }
+}

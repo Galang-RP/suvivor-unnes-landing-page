@@ -7,6 +7,13 @@ export default function Hero() {
   const [tickerPaused, setTickerPaused] = useState(false)
   return <>
     <section id="hero" className="hero" tabIndex={-1} aria-labelledby="hero-title">
+      <div className="hero-atmosphere" aria-hidden="true">
+        <div className="hero-radar"><i /><i /><i /><span /></div>
+        <div className="hero-scan" />
+        <div className="hero-signal hero-signal-one" />
+        <div className="hero-signal hero-signal-two" />
+        <div className="hero-flight-path" />
+      </div>
       <div className="hero-container">
         <div className="hero-copy">
           <p className="hero-badge"><span aria-hidden="true" />SPIRIT IN INNOVATION</p>
