@@ -1,0 +1,10 @@
+:root {
+  --color-background: #1d1819;
+  --color-accent: #faca42;
+  --color-text: #fefefe;
+  --color-muted: #ccc5b2;
+  --color-border: #373335;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}

@@ -1,0 +1,1170 @@
+<!-- SUVIFOR UNNES - Color Palette & System Board -->
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SUVIFOR UNNES - Design System Specification Board</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#FFA800',
+              ochre: '#DEA810',
+              carbon: '#111215',
+              dark: '#17181C',
+              surface: '#EAE6DF',
+              card: '#F3F0EA',
+              border: '#DDD8CE',
+              muted: '#7A7975',
+              text: '#121214'
+            }
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Stylesheet -->
+<style data-purpose="custom-grid-background">
+    /* Blueprint dot matrix background */
+    body {
+      background-color: #0A0B0E;
+      background-image: radial-gradient(rgba(255, 168, 0, 0.15) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* Glow accent border for outer container */
+    .outer-glow-border {
+      box-shadow: 0 0 0 1.5px rgba(250, 180, 20, 0.35), 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Specimen card subtle bevel */
+    .spec-card {
+      background-color: #EFECE6;
+      border: 1px solid rgba(220, 215, 204, 0.8);
+      transition: all 0.2s ease;
+    }
+
+    .spec-card:hover {
+      border-color: rgba(255, 168, 0, 0.5);
+    }
+  </style>
+<!-- END: Custom Stylesheet -->
+</head>
+<body class="min-h-screen text-[#1E1E24] flex items-center justify-center p-4 md:p-8 font-body antialiased selection:bg-brand-gold selection:text-black">
+<!-- BEGIN: MainContainer -->
+<main class="w-full max-w-[1240px] flex flex-col gap-3" data-purpose="specboard-wrapper">
+<!-- Top Bar System Header -->
+<header class="flex items-center justify-between px-2 text-neutral-400 font-mono text-xs tracking-wider" data-purpose="board-header">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#1A1C23] border border-brand-gold/40 text-brand-gold">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+<polyline points="2 17 12 22 22 17"></polyline>
+<polyline points="2 12 12 17 22 12"></polyline>
+</svg>
+</span>
+<span class="text-neutral-200 font-bold tracking-tight text-sm">SUVIFOR UNNES</span>
+<span class="text-neutral-500 font-normal">/ Flight Ops Design System v2.6</span>
+</div>
+<div class="hidden sm:flex items-center gap-4 text-[11px] text-neutral-400">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> TOKENS SYNCHRONIZED</span>
+<span class="text-neutral-600">|</span>
+<span>AEROSPACE BRUTALISM</span>
+</div>
+</header>
+<!-- BEGIN: SpecboardCanvas -->
+<div class="outer-glow-border rounded-[28px] bg-[#E3DFD5] p-4 md:p-6 shadow-2xl relative overflow-hidden" data-purpose="design-system-canvas">
+<!-- Grid layout identical in proportion & hierarchy to reference -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+<!-- ============================================== -->
+<!-- COLUMN 1: COLOR TOKENS & RAMPS (L: 4 cols)     -->
+<!-- ============================================== -->
+<div class="lg:col-span-4 flex flex-col gap-4" data-purpose="color-tokens-column">
+<!-- Primary Color Swatch Card -->
+<div class="spec-card rounded-2xl p-4 flex flex-col justify-between h-[162px]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-xs font-bold text-neutral-800 tracking-wide uppercase">Primary</span>
+<span class="font-mono text-xs text-neutral-600 font-semibold tracking-wider">#FFA800</span>
+</div>
+<!-- Main solid swatch block -->
+<div class="h-16 w-full rounded-xl bg-[#FFA800] p-3 flex items-start justify-between shadow-sm">
+<span class="text-black font-extrabold text-xs tracking-wider uppercase font-mono">SUVIFOR Gold</span>
+<span class="text-black/80 font-mono text-[10px] bg-black/10 px-1.5 py-0.5 rounded">RGB (255, 168, 0)</span>
+</div>
+<!-- Tonal Tint Ramp (10-step swatch bar) -->
+<div class="flex h-5 w-full rounded-lg overflow-hidden border border-black/10 mt-2 shadow-inner">
+<div class="flex-1 bg-[#261900]" title="100 - Deep Amber"></div>
+<div class="flex-1 bg-[#4D3200]" title="200"></div>
+<div class="flex-1 bg-[#805400]" title="300"></div>
+<div class="flex-1 bg-[#B37500]" title="400"></div>
+<div class="flex-1 bg-[#E69700]" title="500"></div>
+<div class="flex-1 bg-[#FFA800]" title="600 (Primary)"></div>
+<div class="flex-1 bg-[#FFBF40]" title="700"></div>
+<div class="flex-1 bg-[#FFD480]" title="800"></div>
+<div class="flex-1 bg-[#FFE9BF]" title="900"></div>
+<div class="flex-1 bg-[#FFF8EB]" title="950"></div>
+</div>
+</div>
+<!-- Secondary Color Swatch Card -->
+<div class="spec-card rounded-2xl p-4 flex flex-col justify-between h-[162px]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-xs font-bold text-neutral-800 tracking-wide uppercase">Secondary</span>
+<span class="font-mono text-xs text-neutral-600 font-semibold tracking-wider">#111215</span>
+</div>
+<div class="h-16 w-full rounded-xl bg-[#111215] p-3 flex items-start justify-between shadow-sm">
+<span class="text-white font-extrabold text-xs tracking-wider uppercase font-mono">Obsidian Black</span>
+<span class="text-white/70 font-mono text-[10px] bg-white/10 px-1.5 py-0.5 rounded">RGB (17, 18, 21)</span>
+</div>
+<!-- Grayscale Tonal Ramp -->
+<div class="flex h-5 w-full rounded-lg overflow-hidden border border-black/10 mt-2 shadow-inner">
+<div class="flex-1 bg-[#0A0A0C]" title="Carbon Deep"></div>
+<div class="flex-1 bg-[#17181D]"></div>
+<div class="flex-1 bg-[#282A32]"></div>
+<div class="flex-1 bg-[#3E424E]"></div>
+<div class="flex-1 bg-[#5A5F6E]"></div>
+<div class="flex-1 bg-[#7C8395]"></div>
+<div class="flex-1 bg-[#A5ABB8]"></div>
+<div class="flex-1 bg-[#C7CBD3]"></div>
+<div class="flex-1 bg-[#E7E9ED]"></div>
+<div class="flex-1 bg-[#FFFFFF]"></div>
+</div>
+</div>
+<!-- Tertiary Color Swatch Card -->
+<div class="spec-card rounded-2xl p-4 flex flex-col justify-between h-[162px]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-xs font-bold text-neutral-800 tracking-wide uppercase">Tertiary</span>
+<span class="font-mono text-xs text-neutral-600 font-semibold tracking-wider">#DEA810</span>
+</div>
+<div class="h-16 w-full rounded-xl bg-[#DEA810] p-3 flex items-start justify-between shadow-sm">
+<span class="text-black font-extrabold text-xs tracking-wider uppercase font-mono">Flight Ochre</span>
+<span class="text-black/80 font-mono text-[10px] bg-black/10 px-1.5 py-0.5 rounded">Aero Caution</span>
+</div>
+<div class="flex h-5 w-full rounded-lg overflow-hidden border border-black/10 mt-2 shadow-inner">
+<div class="flex-1 bg-[#2C2103]"></div>
+<div class="flex-1 bg-[#594306]"></div>
+<div class="flex-1 bg-[#85650A]"></div>
+<div class="flex-1 bg-[#B2870D]"></div>
+<div class="flex-1 bg-[#DEA810]"></div>
+<div class="flex-1 bg-[#E8BD42]"></div>
+<div class="flex-1 bg-[#F1D275]"></div>
+<div class="flex-1 bg-[#F9E8B2]"></div>
+<div class="flex-1 bg-[#FDF5DC]"></div>
+<div class="flex-1 bg-[#FFFAF0]"></div>
+</div>
+</div>
+<!-- Neutral Color Swatch Card -->
+<div class="spec-card rounded-2xl p-4 flex flex-col justify-between h-[162px]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-xs font-bold text-neutral-800 tracking-wide uppercase">Neutral Surface</span>
+<span class="font-mono text-xs text-neutral-600 font-semibold tracking-wider">#EAE6DF</span>
+</div>
+<div class="h-16 w-full rounded-xl bg-[#EAE6DF] border border-neutral-300 p-3 flex items-start justify-between shadow-sm">
+<span class="text-neutral-900 font-extrabold text-xs tracking-wider uppercase font-mono">Spec Chalk / Slate</span>
+<span class="text-neutral-700 font-mono text-[10px] bg-black/5 px-1.5 py-0.5 rounded">RGB (234, 230, 223)</span>
+</div>
+<div class="flex h-5 w-full rounded-lg overflow-hidden border border-black/10 mt-2 shadow-inner">
+<div class="flex-1 bg-[#1C1B19]"></div>
+<div class="flex-1 bg-[#373531]"></div>
+<div class="flex-1 bg-[#5C5953]"></div>
+<div class="flex-1 bg-[#86827B]"></div>
+<div class="flex-1 bg-[#B1ACA4]"></div>
+<div class="flex-1 bg-[#CBC7BF]"></div>
+<div class="flex-1 bg-[#E3DFD7]"></div>
+<div class="flex-1 bg-[#EAE6DF]"></div>
+<div class="flex-1 bg-[#F5F3EF]"></div>
+<div class="flex-1 bg-[#FFFFFF]"></div>
+</div>
+</div>
+</div>
+<!-- ============================================== -->
+<!-- COLUMN 2: TYPOGRAPHY HIERARCHY (M: 4 cols)     -->
+<!-- ============================================== -->
+<div class="lg:col-span-4 flex flex-col gap-4" data-purpose="typography-specimen-column">
+<!-- Headline Token Card -->
+<div class="spec-card rounded-2xl p-5 flex flex-col justify-between h-[216px] relative overflow-hidden group">
+<div class="flex items-center justify-between text-neutral-500 font-mono text-xs">
+<span class="font-semibold uppercase tracking-wider text-neutral-700">Headline</span>
+<span class="bg-neutral-200/60 px-2 py-0.5 rounded text-[11px]">Syne / Grotesk</span>
+</div>
+<!-- Glyphs Big Display -->
+<div class="flex items-baseline justify-between my-auto">
+<span class="font-display font-extrabold text-8xl md:text-9xl tracking-tighter text-[#141518] leading-none select-none">
+                Aa
+              </span>
+<div class="flex flex-col text-right font-mono text-[11px] text-neutral-500 space-y-1">
+<span class="font-bold text-neutral-800">Weight 800</span>
+<span>Upper Track -2%</span>
+<span>Line Height 1.05</span>
+</div>
+</div>
+<div class="w-full pt-2 border-t border-neutral-300/60 flex items-center justify-between text-[11px] font-mono text-neutral-600">
+<span class="truncate">ADVANCING UAV ROBOTICS</span>
+<span class="text-neutral-400 font-bold">48 - 72px</span>
+</div>
+</div>
+<!-- Body Token Card -->
+<div class="spec-card rounded-2xl p-5 flex flex-col justify-between h-[216px] relative">
+<div class="flex items-center justify-between text-neutral-500 font-mono text-xs">
+<span class="font-semibold uppercase tracking-wider text-neutral-700">Body</span>
+<span class="bg-neutral-200/60 px-2 py-0.5 rounded text-[11px]">Plus Jakarta Sans</span>
+</div>
+<!-- Glyphs Medium Display -->
+<div class="flex items-baseline justify-between my-auto">
+<span class="font-body font-semibold text-8xl md:text-9xl tracking-tight text-[#2B2724] leading-none select-none">
+                Aa
+              </span>
+<div class="flex flex-col text-right font-mono text-[11px] text-neutral-500 space-y-1">
+<span class="font-bold text-neutral-800">Weight 400/500</span>
+<span>Leading 1.5</span>
+<span>Kerning Normal</span>
+</div>
+</div>
+<div class="w-full pt-2 border-t border-neutral-300/60 flex items-center justify-between text-[11px] font-mono text-neutral-600">
+<span class="truncate">Aerodynamic telemetry validation</span>
+<span class="text-neutral-400 font-bold">14 - 16px</span>
+</div>
+</div>
+<!-- Label Token Card -->
+<div class="spec-card rounded-2xl p-5 flex flex-col justify-between h-[216px] relative">
+<div class="flex items-center justify-between text-neutral-500 font-mono text-xs">
+<span class="font-semibold uppercase tracking-wider text-neutral-700">Label</span>
+<span class="bg-neutral-200/60 px-2 py-0.5 rounded text-[11px]">JetBrains Mono</span>
+</div>
+<!-- Glyphs Monospace Display -->
+<div class="flex items-baseline justify-between my-auto">
+<span class="font-mono font-medium text-8xl md:text-9xl tracking-tight text-[#3A332C] leading-none select-none">
+                Aa
+              </span>
+<div class="flex flex-col text-right font-mono text-[11px] text-neutral-500 space-y-1">
+<span class="font-bold text-neutral-800">Weight 500/700</span>
+<span>All Caps Track 4%</span>
+<span>Fixed Width 0.6em</span>
+</div>
+</div>
+<div class="w-full pt-2 border-t border-neutral-300/60 flex items-center justify-between text-[11px] font-mono text-neutral-600">
+<span class="truncate">[ KRTI-VTOL // DIVISION ]</span>
+<span class="text-neutral-400 font-bold">11 - 13px</span>
+</div>
+</div>
+</div>
+<!-- ============================================== -->
+<!-- COLUMN 3: COMPONENTS & ATOMS (R: 4 cols)       -->
+<!-- ============================================== -->
+<div class="lg:col-span-4 flex flex-col gap-4" data-purpose="ui-components-column">
+<!-- Row 1: Button Variants Matrix -->
+<div class="spec-card rounded-2xl p-5 flex flex-col justify-between h-[162px]">
+<div class="flex items-center justify-between text-neutral-500 font-mono text-xs mb-3">
+<span class="font-semibold uppercase tracking-wider text-neutral-700">Button Tokens</span>
+<span class="text-[11px]">Hover &amp; Active States</span>
+</div>
+<div class="grid grid-cols-2 gap-3 my-auto">
+<!-- Primary Button (SUVIFOR Signature Amber) -->
+<button class="bg-[#FFA800] hover:bg-[#e69800] text-black font-mono font-bold text-xs uppercase px-4 py-2.5 rounded-lg shadow-sm transition-all duration-150 flex items-center justify-center gap-1.5 active:scale-95" type="button">
+<span>Primary</span>
+<span class="text-[10px]">↗</span>
+</button>
+<!-- Secondary Button (Neutral Surface) -->
+<button class="bg-[#E4DFD5] hover:bg-[#D8D2C6] text-neutral-800 border border-neutral-300 font-mono text-xs uppercase px-4 py-2.5 rounded-lg transition-all duration-150 text-center font-medium active:scale-95" type="button">
+                Secondary
+              </button>
+<!-- Inverted Button (Solid Dark Carbon) -->
+<button class="bg-[#121316] hover:bg-[#1f2127] text-[#FFA800] font-mono font-bold text-xs uppercase px-4 py-2.5 rounded-lg shadow-sm transition-all duration-150 text-center active:scale-95" type="button">
+                Inverted
+              </button>
+<!-- Outlined Button -->
+<button class="border border-neutral-800/40 hover:border-black hover:bg-black/5 text-neutral-900 font-mono text-xs uppercase px-4 py-2.5 rounded-lg transition-all duration-150 text-center active:scale-95" type="button">
+                Outlined
+              </button>
+</div>
+</div>
+<!-- Row 2: Search Input Token -->
+<div class="spec-card rounded-2xl p-5 flex flex-col justify-between h-[115px]">
+<div class="flex items-center justify-between text-neutral-500 font-mono text-xs mb-1">
+<span class="font-semibold uppercase tracking-wider text-neutral-700">Search Element</span>
+<span class="text-[11px]">Form Input / Ghost</span>
+</div>
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-500">
+<svg class="w-4 h-4 text-neutral-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input class="bg-[#E7E2D8] border border-neutral-300/90 text-neutral-800 text-xs font-mono rounded-lg pl-10 pr-4 py-2.5 w-full focus:outline-none placeholder-neutral-500 cursor-default" readonly="" type="text" value="Search telemetry..."/>
+</div>
+</div>
+<!-- Row 3: Visual Stroke Bar Weight Metrics -->
+<div class="spec-card rounded-2xl p-5 flex flex-col justify-center h-[130px] space-y-3">
+<div class="flex items-center justify-between text-neutral-500 font-mono text-[11px]">
+<span class="font-semibold uppercase tracking-wider text-neutral-700">Hierarchy Metrics</span>
+<span>Weights (8px, 4px, 2px)</span>
+</div>
+<!-- Primary Accent Bar -->
+<div class="w-full bg-neutral-300/40 rounded-full h-2 overflow-hidden flex">
+<div class="bg-[#FFA800] h-2 w-3/4 rounded-full"></div>
+</div>
+<!-- Dark Secondary Bar -->
+<div class="w-full bg-neutral-300/40 rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-[#17181D] h-1.5 w-4/5 rounded-full"></div>
+</div>
+<!-- Monospace Fine Specimen Line -->
+<div class="w-full bg-neutral-300/40 rounded-full h-1 overflow-hidden flex">
+<div class="bg-[#4F4C47] h-1 w-2/5 rounded-full"></div>
+</div>
+</div>
+<!-- Row 4: Action Badges & Navigation Bar Segment -->
+<div class="grid grid-cols-12 gap-3 h-[180px]">
+<!-- Navigation Dock Segment (Left sub-card) -->
+<div class="col-span-6 spec-card rounded-2xl p-3 flex flex-col items-center justify-between">
+<span class="font-mono text-[10px] uppercase font-bold text-neutral-500 self-start">Nav Pill</span>
+<div class="bg-[#E4DFD5] border border-neutral-300/80 rounded-2xl px-3 py-2 flex items-center justify-center gap-2 shadow-inner w-full my-auto">
+<!-- Active Item -->
+<div class="w-7 h-7 rounded-lg bg-[#FFA800] text-black flex items-center justify-center shadow-sm">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<!-- Inactive Icon 1 -->
+<div class="w-6 h-6 rounded-md text-neutral-600 hover:text-black flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Inactive Icon 2 -->
+<div class="w-6 h-6 rounded-md text-neutral-600 hover:text-black flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<span class="font-mono text-[9px] text-neutral-400 self-end">Float Segment</span>
+</div>
+<!-- Utility Controls & Micro Badges (Right sub-card) -->
+<div class="col-span-6 spec-card rounded-2xl p-3 flex flex-col justify-between">
+<span class="font-mono text-[10px] uppercase font-bold text-neutral-500">Atomic Badges</span>
+<!-- Badges Container -->
+<div class="flex flex-col gap-2 my-auto">
+<!-- Tag Chip -->
+<div class="inline-flex items-center gap-1.5 bg-[#17181D] text-[#FFA800] px-2.5 py-1 rounded-md text-[11px] font-mono font-medium self-start shadow-sm">
+<svg class="w-3 h-3 text-[#FFA800]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>VTOL-01</span>
+</div>
+<!-- Action Button Cluster -->
+<div class="flex items-center gap-1.5">
+<button class="w-7 h-7 rounded bg-[#FFA800] text-black flex items-center justify-center font-bold hover:opacity-90 shadow-sm" title="Edit Token" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+<button class="w-7 h-7 rounded bg-[#2D3039] text-neutral-200 flex items-center justify-center font-bold hover:bg-[#393D49]" title="Shape Config" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+<button class="w-7 h-7 rounded bg-[#1A1B20] text-neutral-400 flex items-center justify-center hover:text-white" title="Properties" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+<button class="w-7 h-7 rounded bg-[#B3261E] text-white flex items-center justify-center hover:bg-red-700" title="Delete / Reset" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+</div>
+<span class="font-mono text-[9px] text-neutral-400 self-end">Action Matrix</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Metadata strip within the card -->
+<footer class="mt-4 pt-3 border-t border-neutral-300/80 flex flex-wrap items-center justify-between text-[11px] font-mono text-neutral-500" data-purpose="specboard-card-footer">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+<span class="font-bold text-neutral-700">UKM RIPTEK UNIVERSITAS NEGERI SEMARANG</span>
+<span class="text-neutral-400">• UAV RESEARCH TEAM SPECIFICATION</span>
+</div>
+<div class="flex items-center gap-4 text-neutral-600">
+<span>CANVAS: #E3DFD5</span>
+<span>SYSTEM ID: SVF-DS-2026.01</span>
+<span class="text-neutral-800 font-bold">[ KRTI // TEKNOFEST READY ]</span>
+</div>
+</footer>
+</div>
+<!-- END: SpecboardCanvas -->
+</main>
+<!-- END: MainContainer -->
+</body></html>
+
+<!-- SUVIFOR UNNES - Nav Opened (Identical Synchronized Logo) -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SUVIFOR UNNES - Navigation Overlay</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#141414',
+              footer: '#0e0e0e',
+              amber: '#FACA42',
+              muted: '#7E7E7E',
+              border: '#373335'
+            }
+          },
+          fontFamily: {
+            stencil: ['"Syne"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            grotesk: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts: Space Grotesk, Syne, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800;900&amp;display=swap" rel="stylesheet">
+<!-- Custom Stencil and Accent Styling -->
+<style data-purpose="typography">
+    .font-stencil {
+      font-family: 'Syne', sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .text-outline {
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.2);
+    }
+    .menu-link-active {
+      color: #FACA42;
+      text-shadow: 0 0 25px rgba(250, 202, 66, 0.3);
+    }
+  </style>
+<style data-purpose="layout">
+    body {
+      background-color: #1D1819;
+      color: #FEFEFE;
+      overflow-x: hidden;
+    }
+    /* Subtle dot grid pattern */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+    #navigation-screen {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    #navigation-screen.closing {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.99);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#1D1819] text-[#FEFEFE] flex flex-col justify-between selection:bg-[#FACA42] selection:text-[#1D1819] relative antialiased" id="navigation-screen">
+<!-- BEGIN: MainHeader -->
+<header class="w-full px-8 md:px-14 py-8 flex items-center justify-between z-20">
+<div class="flex items-center">
+<a class="flex items-center gap-3.5 group cursor-pointer" href="javascript:void(0)" onclick="closeNavigation('hero')">
+<!-- UAV Gold Box Logo Icon -->
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh2FjZJyD_NaNZYS3xPaXYLLiXnKO_5MXV5hG12InzdMUkdeTcuz_1KyOeeeHgt2XEDw7juv8987Flg-ixfT_sVpnlKYhLREsvYBjtwcNVDnqtj_du2NYc2X8GiGvsCco2OjhYNfVB0SNRq74nYjQOJDBuRczj2HHD9IvQh-xccuMRlGzB_t4FmpRuAGGlHQjCLkn9mYRIkBvMsUru0n1ke4e44qWmgUevQ3Cpm7kFDr_Hu0j17Xep4Q1ZMpzQaJO65g" alt="SUVIFOR Logo" class="h-9 w-auto object-contain transition-transform group-hover:scale-105">
+<div class="flex flex-col">
+<span class="font-stencil text-base sm:text-lg tracking-wider text-[#FEFEFE] flex items-center gap-1.5 uppercase font-extrabold leading-none">
+          SUVIFOR <span class="text-[#FACA42]">UNNES</span>
+</span>
+<span class="text-[9px] font-mono tracking-[0.25em] text-[#CCC5B2] uppercase font-medium mt-1 leading-none">
+          UAV RESEARCH TEAM
+        </span>
+</div>
+</a>
+</div>
+<div class="flex justify-center">
+<button class="group flex items-center gap-2 bg-[#262022] hover:bg-[#2e2729] border border-[#373335] hover:border-[#FACA42] px-5 py-2.5 transition-all text-xs font-mono font-bold uppercase tracking-widest text-[#CCC5B2] hover:text-[#FEFEFE] cursor-pointer shadow-[3px_3px_0px_0px_#FACA42] hover:translate-x-[1px] hover:translate-y-[1px]" data-purpose="close-trigger" id="close-button" onclick="closeNavigation()" type="button">
+<span class="text-[#FACA42] font-bold text-sm leading-none">✕</span>
+<span class="">CLOSE</span>
+</button>
+</div>
+<div class="flex items-center justify-end">
+<a class="hidden sm:inline-flex items-center gap-2 bg-[#FACA42] hover:bg-white hover:border-white text-[#1D1819] font-mono font-bold text-xs uppercase px-4 py-2.5 border-2 border-[#FACA42] shadow-[3px_3px_0px_#373335] transition-all hover:translate-x-0.5 hover:translate-y-0.5" href="javascript:void(0)" onclick="closeNavigation('contact')">
+<span class="">LET'S FLY</span>
+<span class="text-sm">↗</span>
+</a>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: NavigationBody -->
+<main class="w-full flex-grow flex flex-col justify-center px-8 md:px-14 py-8 relative overflow-hidden bg-brand-bg" data-purpose="navigation-content">
+<div class="max-w-7xl w-full mx-auto flex flex-col justify-center h-full z-10 py-6 md:py-10">
+<div class="relative flex flex-col items-start gap-4 md:gap-7 my-auto">
+<div class="absolute right-6 md:right-32 top-1/2 -translate-y-1/2 w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-[#CCC5B2]/60 pointer-events-none hidden sm:block"></div>
+<div class="flex flex-wrap items-center gap-x-8 md:gap-x-12">
+<a class="nav-menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FACA42] hover:opacity-90 transition-opacity font-['Syne']" href="javascript:void(0)" onclick="closeNavigation('hero')">HOME</a>
+<a class="nav-menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-['Syne']" href="javascript:void(0)" onclick="closeNavigation('about')">ABOUT</a>
+</div>
+<div class="flex flex-wrap items-center gap-x-8 md:gap-x-12">
+<a class="nav-menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-['Syne']" href="javascript:void(0)" onclick="closeNavigation('programs')">PROGRAMS</a>
+</div>
+<div class="flex flex-wrap items-center gap-x-8 md:gap-x-12">
+<a class="nav-menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-['Syne']" href="javascript:void(0)" onclick="closeNavigation('recruitment')">RECRUITMENT</a>
+<a class="nav-menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-['Syne']" href="javascript:void(0)" onclick="closeNavigation('contact')">CONTACT</a>
+</div>
+<div class="pt-10 md:pt-14 flex flex-wrap items-center gap-x-8 gap-y-2 text-[11px] md:text-xs font-mono tracking-widest text-[#CCC5B2] uppercase border-t border-[#373335] w-full">
+<div><span class="text-[#CCC5B2]/60 font-bold">TEAM:</span> <span class="text-[#FEFEFE]">SUVIFOR UNNES</span></div>
+<div><span class="text-[#CCC5B2]/60 font-bold">LOCATION:</span> <span class="text-[#CCC5B2]">GEDUNG PKMU LT. 2 UNNES, SEMARANG</span></div>
+<div><span class="text-[#CCC5B2]/60 font-bold">EMAIL:</span> <span class="text-[#CCC5B2]">CYCYLIA_24@STUDENTS.UNNES.AC.ID</span></div>
+</div>
+</div>
+</div>
+</main>
+<!-- END: NavigationBody -->
+<!-- BEGIN: NavigationFooter -->
+<footer class="w-full bg-[#171314] border-t border-[#373335] px-8 md:px-14 py-10 z-20" data-purpose="menu-footer">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-sm font-['Space_Grotesk']">
+<div class="flex flex-col space-y-1.5 font-['Space_Grotesk']">
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="mailto:cycylia_24@students.unnes.ac.id">cycylia_24@students.unnes.ac.id</a>
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="https://wa.me/628882400429">+62 888 2400 429</a>
+<span class="text-xs text-[#CCC5B2]/60 font-mono">(PIC Cycyclia Kusumawardani)</span>
+</div>
+<div class="flex flex-col space-y-1.5 font-['Space_Grotesk']">
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="https://instagram.com/suvifor" rel="noopener noreferrer" target="_blank">Instagram (@suvifor)</a>
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="https://youtube.com" rel="noopener noreferrer" target="_blank">YouTube</a>
+</div>
+<div class="flex flex-col space-y-1 font-['Space_Grotesk']">
+<p class="text-[#FEFEFE]">Gedung PKMU Lt. 2 (Lab Robotika)</p>
+<p class="text-[#CCC5B2]/60 text-xs">Kampus Sekaran, Gunungpati, Semarang</p>
+</div>
+</div>
+</footer>
+<!-- END: NavigationFooter -->
+<script>
+  function closeNavigation(targetSection) {
+    const navScreen = document.getElementById('navigation-screen');
+    if (navScreen) {
+      navScreen.classList.add('closing');
+    }
+    setTimeout(() => {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ type: 'close-navigation', target: targetSection || null }, '*');
+      }
+      if (document.referrer && document.referrer.includes(window.location.host)) {
+        if (targetSection) {
+          window.location.href = document.referrer.split('#')[0] + '#' + targetSection;
+        } else {
+          window.history.back();
+        }
+      } else if (targetSection) {
+        window.location.hash = targetSection;
+      }
+    }, 240);
+  }
+</script>
+
+
+</body></html>
+
+<!-- SUVIFOR UNNES - Slide-Down Menu & Synchronized Exact Logo -->
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SUVIFOR UNNES — UAV Research Team</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Space Grotesk, Syne, JetBrains Mono -->
+<link href="https://fonts.preconnect.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800;900&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#09090b',
+              surface: '#0f1015',
+              card: '#14151c',
+              amber: '#FACA42',
+              amberLight: '#FFB800',
+              border: '#373335',
+              borderLight: '#2c3142',
+              muted: '#CCC5B2',
+              dim: '#8E8880'
+            }
+          },
+          fontFamily: {
+            syne: ['"Syne"', 'sans-serif'],
+            grotesk: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Clean blueprint engineering background grid */
+    .blueprint-bg {
+      background-color: #1D1819;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+
+    /* Stencil and title display */
+    .font-stencil {
+      font-family: 'Syne', sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    /* Ticker animation */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: inline-flex;
+      white-space: nowrap;
+      animation: marquee 28s linear infinite;
+    }
+
+    /* Bayucaraka Brutalist Hard Dropshadow Styles */
+    .brutalist-btn-amber {
+      box-shadow: 4px 4px 0px 0px #FFFFFF;
+      transition: all 0.15s ease-in-out;
+    }
+    .brutalist-btn-amber:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px 0px #FFFFFF;
+    }
+
+    .brutalist-btn-outline {
+      box-shadow: 4px 4px 0px 0px #FACA42;
+      transition: all 0.15s ease-in-out;
+    }
+    .brutalist-btn-outline:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px 0px #FACA42;
+    }
+
+    /* Curtain Slide-down Menu (Bayucaraka style) */
+    #nav-overlay {
+      transform: translateY(-100%);
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease-out;
+      will-change: transform;
+    }
+    #nav-overlay.menu-open {
+      transform: translateY(0%);
+    }
+
+    /* Stagger slide-down/fade-in animations for nav links */
+    .nav-stagger-item {
+      opacity: 0;
+      transform: translateY(-24px);
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease-out;
+    }
+    #nav-overlay.menu-open .nav-stagger-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #nav-overlay.menu-open .nav-stagger-1 { transition-delay: 0.18s; }
+    #nav-overlay.menu-open .nav-stagger-2 { transition-delay: 0.26s; }
+    #nav-overlay.menu-open .nav-stagger-3 { transition-delay: 0.34s; }
+    #nav-overlay.menu-open .nav-stagger-4 { transition-delay: 0.42s; }
+    #nav-overlay.menu-open .nav-stagger-5 { transition-delay: 0.50s; }
+  </style>
+</head>
+<body class="bg-[#1D1819] text-[#FEFEFE] font-grotesk antialiased blueprint-bg selection:bg-[#FACA42] selection:text-[#1D1819] min-h-screen relative">
+<!-- ========================================================================= -->
+<!-- FULLSCREEN CURTAIN NAVIGATION OVERLAY (Bayucaraka Slide-Down Style) -->
+<!-- ========================================================================= -->
+<div aria-hidden="true" class="fixed inset-0 z-[100] bg-[#141414] flex flex-col justify-between overflow-y-auto" id="nav-overlay">
+<!-- Overlay Top Bar: 100% IDENTICAL LOGO & EXACT NAVBAR LAYOUT -->
+<header class="w-full sticky top-0 z-20 bg-[#141414] border-b border-[#373335]/70">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Identical SUVIFOR Brand Identity Component -->
+<a class="flex items-center gap-3 group select-none" href="#hero" onclick="closeMenu()">
+<div class="w-10 h-10 flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105 overflow-hidden"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcDddApZYu65QVglFRtNxhK4Lj_QR4i08wBbt9tmp1YZ-RM2lsOcw0v3PMH-izBQFKi_iVM5s1RhXPfIBVi8AkPvYW9bzbc3PKNe5ufotmFoIh9yaVuNUWoMoj2G9qXVgBUW-goVZdNRN-LRiLnznyhcdq0pUHIbS2ppf4-6lPxoSNohzQpweziryCMa03l2H5rfuEuNL-ovivYB7stAM065F3GdjLacAIvThg-Kfjl9rVua5pWwpHM759Xly0A-Ry7Q" alt="SUVIFOR Logo" class="w-full h-full object-contain"></div>
+<div class="flex flex-col">
+<span class="font-stencil text-base sm:text-lg tracking-wider text-[#FEFEFE] flex items-center leading-tight">
+            SUVIFOR&nbsp;<span class="text-[#FACA42]">UNNES</span>
+</span>
+<span class="font-mono text-[9px] sm:text-[10px] tracking-widest text-[#CCC5B2] uppercase leading-tight mt-0.5">UAV RESEARCH TEAM</span>
+</div>
+</a>
+<!-- Overlay Active [ ✕ CLOSE ] Switch in exact center button position -->
+<button aria-label="Close Navigation Menu" class="flex items-center gap-2.5 px-5 py-2.5 border border-[#FACA42] bg-[#262022] hover:bg-[#2e2729] rounded-none transition-all font-mono text-xs tracking-widest uppercase text-[#FEFEFE] shadow-[3px_3px_0px_0px_#FACA42] hover:translate-x-[1px] hover:translate-y-[1px] cursor-pointer" id="close-menu-btn" type="button">
+<span class="text-[#FACA42] font-bold text-sm leading-none">✕</span>
+<span class="">CLOSE</span>
+</button>
+<!-- Right Header Actions Identical -->
+<div class="flex items-center gap-5">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-[#FACA42] bg-[#FACA42] text-[#1D1819] font-mono text-xs font-bold tracking-widest uppercase rounded-none brutalist-btn-amber hover:bg-white hover:border-white transition-all" href="#recruitment" onclick="closeMenu()">
+<span class="">LET'S FLY</span>
+<span class="text-sm font-extrabold">↗</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Overlay Center Navigation Links with Stagger Curtain Slide Animation -->
+<main class="w-full flex-grow flex flex-col justify-center px-6 md:px-14 py-8 md:py-12 relative overflow-hidden bg-[#141414]" data-purpose="navigation-content">
+<div class="max-w-7xl w-full mx-auto flex flex-col justify-center h-full z-10 py-4 md:py-6">
+<div class="relative flex flex-col items-start gap-4 md:gap-7 my-auto">
+<div class="absolute right-6 md:right-32 top-1/2 -translate-y-1/2 w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-[#CCC5B2]/60 pointer-events-none hidden sm:block"></div>
+<div class="nav-stagger-item nav-stagger-1 flex flex-wrap items-center gap-x-8 md:gap-x-12">
+<a class="nav-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FACA42] hover:opacity-90 transition-opacity font-stencil" href="#hero">HOME</a>
+<a class="nav-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-stencil" href="#about">ABOUT</a>
+</div>
+<div class="nav-stagger-item nav-stagger-2 flex flex-wrap items-center gap-x-8 md:gap-x-12">
+<a class="nav-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-stencil" href="#programs">PROGRAMS</a>
+</div>
+<div class="nav-stagger-item nav-stagger-3 flex flex-wrap items-center gap-x-8 md:gap-x-12">
+<a class="nav-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-stencil" href="#recruitment">RECRUITMENT</a>
+<a class="nav-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-stencil" href="#contact">CONTACT</a>
+</div>
+<!-- Technical metadata bar -->
+<div class="nav-stagger-item nav-stagger-4 pt-8 md:pt-12 flex flex-wrap items-center gap-x-8 gap-y-2 text-[11px] md:text-xs font-mono tracking-widest text-[#CCC5B2] uppercase border-t border-[#373335] w-full">
+<div><span class="text-[#CCC5B2]/60 font-bold">TEAM:</span> <span class="text-[#FEFEFE]">SUVIFOR UNNES</span></div>
+<div><span class="text-[#CCC5B2]/60 font-bold">LOCATION:</span> <span class="text-[#CCC5B2]">GEDUNG PKMU LT. 2 UNNES, SEMARANG</span></div>
+<div><span class="text-[#CCC5B2]/60 font-bold">EMAIL:</span> <span class="text-[#CCC5B2]">CYCYLIA_24@STUDENTS.UNNES.AC.ID</span></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Overlay Footer Info -->
+<footer class="nav-stagger-item nav-stagger-5 w-full bg-[#171314] border-t border-[#373335] px-6 md:px-14 py-8 md:py-10 z-20" data-purpose="menu-footer">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-sm font-grotesk">
+<div class="flex flex-col space-y-1.5 font-grotesk">
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="mailto:cycylia_24@students.unnes.ac.id">cycylia_24@students.unnes.ac.id</a>
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="https://wa.me/628882400429">+62 888 2400 429</a>
+<span class="text-xs text-[#CCC5B2]/60 font-mono">(PIC Cycylia Kusumawardani)</span>
+</div>
+<div class="flex flex-col space-y-1.5 font-grotesk">
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="https://instagram.com/suvifor" rel="noopener noreferrer" target="_blank">Instagram (@suvifor)</a>
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="text-[#CCC5B2] hover:text-[#FEFEFE] transition-colors" href="https://youtube.com" rel="noopener noreferrer" target="_blank">YouTube</a>
+</div>
+<div class="flex flex-col space-y-1 font-grotesk">
+<p class="text-[#FEFEFE]">Gedung PKMU Lt. 2 (Lab Robotika)</p>
+<p class="text-[#CCC5B2]/60 text-xs">Kampus Sekaran, Gunungpati, Semarang</p>
+</div>
+</div>
+</footer>
+</div>
+<!-- ========================================================================= -->
+<!-- SECTION 1: HEADER & HERO SECTION -->
+<!-- ========================================================================= -->
+<header class="w-full sticky top-0 z-50 bg-[#1D1819]/90 backdrop-blur-md border-b border-[#373335]" data-purpose="site-navigation">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- SUVIFOR UNNES Logo Brand Identity (100% IDENTICAL WITH OVERLAY) -->
+<a class="flex items-center gap-3 group select-none" href="#hero">
+<div class="w-10 h-10 flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105 overflow-hidden"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDPr9TX7C2Huuuqeg6JVvBFm63fMgVU4BQuf73X6gnOLJdAYefQZSZiydudbjllkCiBiwUpcXTH7Wd4IYpCleQcDcNDd9s06_G-ch-ztAQcatIQJktmMgMjBTInRkWjsRT1ANWrBE184Rc9QfVbOKlVLZA1kFgDOwBGABkgulmS6KlIiycfr9JTtrURvICFBHjnr3lDsIlWLSIbdjYw3-qJcfYEJ-NhvC9VIiRh1sVfOTsYT3F7uALF-TZwnZt3CA2uQ" alt="SUVIFOR Logo" class="w-full h-full object-contain"></div>
+<div class="flex flex-col">
+<span class="font-stencil text-base sm:text-lg tracking-wider text-[#FEFEFE] flex items-center leading-tight">
+          SUVIFOR&nbsp;<span class="text-[#FACA42]">UNNES</span>
+</span>
+<span class="font-mono text-[9px] sm:text-[10px] tracking-widest text-[#CCC5B2] uppercase leading-tight mt-0.5">UAV RESEARCH TEAM</span>
+</div>
+</a>
+<!-- Central Bayucaraka Minimalist Menu Button -->
+<button aria-label="Open Navigation Menu" class="flex items-center gap-2.5 px-5 py-2.5 border border-[#373335] bg-[#1D1819] rounded-none hover:border-[#FACA42] transition-all font-mono text-xs tracking-widest uppercase text-[#FEFEFE] shadow-[3px_3px_0px_0px_#FACA42] hover:translate-x-[1px] hover:translate-y-[1px] cursor-pointer" id="open-menu-btn" type="button">
+<span class="">MENU</span>
+<div class="flex flex-col gap-1 w-4">
+<span class="w-full h-0.5 bg-[#FACA42]"></span>
+<span class="w-full h-0.5 bg-[#FACA42]"></span>
+</div>
+</button>
+<!-- Right Header Actions (Contact Link + Brutalist Let's Fly CTA) -->
+<div class="flex items-center gap-5">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-[#FACA42] bg-[#FACA42] text-[#1D1819] font-mono text-xs font-bold tracking-widest uppercase rounded-none brutalist-btn-amber hover:bg-white hover:border-white transition-all" href="#recruitment">
+<span class="">LET'S FLY</span>
+<span class="text-sm font-extrabold">↗</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-20 md:pt-32 md:pb-28 border-b border-[#373335] overflow-hidden" data-purpose="hero-banner" id="hero">
+<div class="absolute right-12 md:right-32 top-28 w-3 h-3 rounded-full bg-[#FACA42] opacity-80 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="max-w-5xl">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 bg-[#373335] border border-[#FACA42]/40 text-[#FACA42] font-mono text-xs tracking-widest uppercase font-semibold mb-6 rounded-none">
+<span class="w-1.5 h-1.5 bg-[#FACA42] rounded-full animate-pulse"></span>
+<span class="">SPIRIT IN INNOVATION</span>
+</div>
+<h1 class="font-stencil text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
+<span class="block text-[#FEFEFE]">ADVANCING UAV ROBOTICS &amp;</span>
+<span class="block text-[#FACA42]">AERIAL INTELLIGENCE.</span>
+</h1>
+<div class="mt-8 border-l-2 border-[#FACA42] pl-6 max-w-3xl">
+<p class="text-base sm:text-lg text-[#CCC5B2] font-normal leading-relaxed font-grotesk">
+          Semarang State University Flying Object Research (SUVIFOR) merupakan tim riset UAV di bawah naungan UKM RIPTEK Universitas Negeri Semarang (UNNES) yang berfokus pada riset, inovasi, dan pengembangan teknologi kedirgantaraan serta wahana tanpa awak.
+        </p>
+</div>
+<div class="mt-12 flex flex-wrap items-center gap-6 font-mono text-xs tracking-wider">
+<a class="px-7 py-4 bg-[#FACA42] border-2 border-[#FACA42] text-[#1D1819] font-extrabold tracking-widest uppercase rounded-none brutalist-btn-amber inline-flex items-center gap-2.5 hover:bg-white hover:border-white transition-all" href="#recruitment">
+<span class="">[ JOIN RECRUITMENT ↗ ]</span>
+</a>
+<a class="px-7 py-4 border-2 border-[#373335] bg-[#1D1819] text-[#FEFEFE] font-extrabold tracking-widest uppercase rounded-none brutalist-btn-outline hover:text-[#FACA42] hover:border-[#FACA42] inline-flex items-center gap-2.5 transition-all" href="#programs">
+<span class="">[ EXPLORE PROGRAMS ↓ ]</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Full-Width Running Marquee Ticker -->
+<aside class="w-full bg-[#FACA42] text-[#1D1819] py-3.5 select-none overflow-hidden border-b border-[#373335] font-stencil" data-purpose="marquee-ticker">
+<div class="animate-marquee flex items-center">
+<span class="mx-6 text-sm font-extrabold tracking-wider">SUVIFOR UNNES — SPIRIT IN INNOVATION</span>
+<span class="text-base font-bold">✱</span>
+<span class="mx-6 text-sm font-extrabold tracking-wider">RESEARCH, INNOVATION &amp; UAV DEVELOPMENT</span>
+<span class="text-base font-bold">✱</span>
+<span class="mx-6 text-sm font-extrabold tracking-wider">KRTI &amp; TEKNOFEST SQUAD</span>
+<span class="text-base font-bold">✱</span>
+<span class="mx-6 text-sm font-extrabold tracking-wider">SUVIFOR UNNES — SPIRIT IN INNOVATION</span>
+<span class="text-base font-bold">✱</span>
+<span class="mx-6 text-sm font-extrabold tracking-wider">RESEARCH, INNOVATION &amp; UAV DEVELOPMENT</span>
+<span class="text-base font-bold">✱</span>
+<span class="mx-6 text-sm font-extrabold tracking-wider">KRTI &amp; TEKNOFEST SQUAD</span>
+<span class="text-base font-bold">✱</span>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- SECTION 2: ABOUT US (Clean Editorial Layout) -->
+<!-- ========================================================================= -->
+<section class="py-20 md:py-28 px-6 border-b border-[#373335] relative" data-purpose="about-editorial" id="about">
+<div class="max-w-7xl mx-auto">
+<div class="inline-block bg-[#FACA42] text-[#1D1819] font-stencil text-xs tracking-widest font-black px-3.5 py-1 mb-8 rounded-none">
+      VISION &amp; IDENTITY
+    </div>
+<div class="max-w-5xl">
+<h2 class="font-stencil text-2xl sm:text-3xl md:text-4xl text-[#FEFEFE] leading-snug tracking-tight">
+        WADAH PENELITIAN, PENGEMBANGAN DAN PRODUKSI TEKNOLOGI WAHANA TERBANG TANPA AWAK.
+      </h2>
+<p class="mt-6 text-base md:text-lg text-[#CCC5B2] font-normal leading-relaxed max-w-4xl font-grotesk">
+        Semarang State University Flying Object Research (SUVIFOR) merupakan tim riset UAV di bawah naungan UKM Rekayasa Ilmu Pengetahuan dan Teknologi (RIPTEK) Universitas Negeri Semarang. SUVIFOR menjadi wadah mahasiswa yang memiliki minat dan dedikasi dalam bidang UAV dan teknologi kedirgantaraan melalui kegiatan penelitian, pengembangan, edukasi, dan pelatihan. Fokus riset meliputi desain aerodinamika, sistem navigasi otomatis, serta penerapan kecerdasan buatan untuk menghasilkan UAV yang inovatif, efisien, dan aplikatif.
+      </p>
+</div>
+<div class="mt-14 pt-10 border-t border-[#373335] grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="border-l-2 border-[#FACA42] pl-5">
+<span class="text-[#FACA42] block font-bold font-mono text-xs tracking-wider uppercase mb-2">01 RISET &amp; PRODUKSI</span>
+<p class="text-[#CCC5B2] text-sm leading-relaxed font-grotesk">
+          Menjadi pusat penelitian wahana terbang tanpa awak di UNNES serta melakukan proses rekayasa, perancangan, dan produksi sesuai standar industri.
+        </p>
+</div>
+<div class="border-l-2 border-[#FACA42] pl-5">
+<span class="text-[#FACA42] block font-bold font-mono text-xs tracking-wider uppercase mb-2">02 EDUKASI &amp; KREASI</span>
+<p class="text-[#CCC5B2] text-sm leading-relaxed font-grotesk">
+          Menumbuhkan daya tarik mahasiswa terhadap teknologi aviasi melalui pelatihan teknis, simulasi penerbangan, dan pengujian prototipe.
+        </p>
+</div>
+<div class="border-l-2 border-[#FACA42] pl-5">
+<span class="text-[#FACA42] block font-bold font-mono text-xs tracking-wider uppercase mb-2">03 KOMPETISI &amp; PRESTASI</span>
+<p class="text-[#CCC5B2] text-sm leading-relaxed font-grotesk">
+          Menjadi salah satu pemain utama dalam berbagai kegiatan dan kompetisi kedirgantaraan nasional (KRTI) maupun internasional (TEKNOFEST).
+        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 3: WORK PROGRAMS -->
+<!-- ========================================================================= -->
+<section class="py-20 md:py-28 px-6 border-b border-[#373335] relative" data-purpose="programs-split-list" id="programs">
+<div class="absolute right-1/4 top-16 w-3 h-3 rounded-full bg-[#FACA42] opacity-60 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-[#373335]">
+<div>
+<div class="inline-block bg-[#FACA42] text-[#1D1819] font-stencil text-xs tracking-widest font-black px-3 py-1 mb-5 rounded-none">OPERATIONAL DIVISIONS &amp; PROKER</div>
+<h2 class="font-stencil text-3xl sm:text-5xl lg:text-6xl leading-tight text-[#FEFEFE] tracking-tight uppercase">WORK <span class="text-[#FACA42]">PROGRAMS</span></h2>
+</div>
+<p class="font-mono text-xs text-[#CCC5B2] tracking-wider uppercase leading-relaxed max-w-md">AGENDA RISET, PENDIDIKAN TEKNIKAL, SERTA KOMPETISI NASIONAL &amp; INTERNASIONAL SUVIFOR UNNES</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-[#373335]">
+<article class="p-8 border-b lg:border-b-0 border-[#373335] md:border-r flex flex-col justify-between group hover:bg-[#252021]/60 transition-colors">
+<div class="flex flex-col">
+<div class="flex items-center justify-between pb-6 border-b border-[#373335]/60 mb-6">
+<span class="font-stencil text-2xl font-bold text-[#FACA42]">01</span>
+<span class="font-mono text-[11px] tracking-widest uppercase text-[#8E8880]">EDUKASI &amp; WORKSHOP</span>
+</div>
+<div class="aspect-[4/3] overflow-hidden border border-[#373335] bg-[#252021] mb-6">
+<img alt="Robotic School SUVIFOR UNNES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWO5nDVW6RZn_WS11QUt1zHtVub6zRCdS0bTQ4CeuZMmuDwv645udR9AhYSpAVQ4XCRYhVOvgWkrrF75MvuJ6BomE_VHxpdPjs7iaaY6sTF-7E5JUFr_vmb_x7hJGweYjJDHZuqTIsCEY9ItqYmUvbwlWOszm5E6l56Mt9PJZltb8CwnICXFHdmpBjZ5mtiCliKJ5djhWcSKWGxEBEr61Jy5JeKPvdqqdmsl3jLAZBc3C5AsCjTS5gGK0bw2PegiGv6g">
+</div>
+<h3 class="font-stencil text-xl text-[#FEFEFE] font-bold tracking-tight group-hover:text-[#FACA42] transition-colors uppercase">ROBOTIC SCHOOL</h3>
+<p class="mt-3 text-[#CCC5B2] font-grotesk text-sm leading-relaxed">Pengenalan dunia robotika penerbangan dan wahana terbang tanpa awak (UAV) serta wadah pengembangan skill teknikal bagi mahasiswa.</p>
+</div>
+</article>
+<article class="p-8 border-b lg:border-b-0 border-[#373335] lg:border-r flex flex-col justify-between group hover:bg-[#252021]/60 transition-colors">
+<div class="flex flex-col">
+<div class="flex items-center justify-between pb-6 border-b border-[#373335]/60 mb-6">
+<span class="font-stencil text-2xl font-bold text-[#FACA42]">02</span>
+<span class="font-mono text-[11px] tracking-widest uppercase text-[#8E8880]">REGENERASI ANGGOTA</span>
+</div>
+<div class="aspect-[4/3] overflow-hidden border border-[#373335] bg-[#252021] mb-6">
+<img alt="Open Recruitment SUVIFOR UNNES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2pQ-UMiD4Ys1t7NL6a2ipF3IxLmZXdSlDAGZg-IxwGm_IZd8o8ov8WJ_dlrZeJZuC6dc1B1QMyjZtRvbCAwnjp2xZMmvFIf99eKDApteonetuTd_5H0NdTbXwOaJt5ClA0U9BLij19gwxXzs7nRdtZnVcVcEZpId0JG4d0OAOOd21bnBxwVT1diTEWd_jiAIpfJJxFA8miYKOp_4HbdndhbOb5TaZME8suM3197KDpfzsu0Hg1FvcQ93s07Mp7Ah6rQ">
+</div>
+<h3 class="font-stencil text-xl text-[#FEFEFE] font-bold tracking-tight group-hover:text-[#FACA42] transition-colors uppercase">OPEN RECRUITMENT</h3>
+<p class="mt-3 text-[#CCC5B2] font-grotesk text-sm leading-relaxed">Regenerasi anggota baru SUVIFOR yang diperuntukkan bagi mahasiswa UNNES semester 2 dan 4 dalam divisi mekanik, elektrik, serta software.</p>
+</div>
+</article>
+<article class="p-8 border-b md:border-b-0 border-[#373335] flex flex-col justify-between group hover:bg-[#252021]/60 transition-colors">
+<div class="flex flex-col">
+<div class="flex items-center justify-between pb-6 border-b border-[#373335]/60 mb-6">
+<span class="font-stencil text-2xl font-bold text-[#FACA42]">03</span>
+<span class="font-mono text-[11px] tracking-widest uppercase text-[#8E8880]">PELATIHAN TEKNIKAL</span>
+</div>
+<div class="aspect-[4/3] overflow-hidden border border-[#373335] bg-[#252021] mb-6">
+<img alt="Pendidikan Dasar SUVIFOR" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7a4MD87DbhTtC4WcQPnz6jN1rRcj41s7EbjwamSMuNAm1sRr1R9t9dIcFAk1CeOIuN97rUtkjt64HDUivHhpGX55vN3AGqhmue0JR9WBI5upr3wgh9oLe3P_o9cKgei1lofoCfwsmMQN32At0n5bulX4NlP8fs0Ao291KwnIgfZDp_HPvDc6Q9BP9DhtqevgnOE0L1hqiJrn6YnDC8_E64WVWDhHMEneUApAcJjwXTn3pS3YL2X9kc3GvoohpoY9tbA">
+</div>
+<h3 class="font-stencil text-xl text-[#FEFEFE] font-bold tracking-tight group-hover:text-[#FACA42] transition-colors uppercase">PENDIDIKAN DASAR (PENDAS)</h3>
+<p class="mt-3 text-[#CCC5B2] font-grotesk text-sm leading-relaxed">Pelatihan awal komprehensif dan praktik langsung dalam merancang aerodinamika, perakitan avionik, serta uji terbang prototipe di lapangan.</p>
+</div>
+</article>
+<article class="p-8 border-b md:border-b-0 border-[#373335] md:border-r flex flex-col justify-between group hover:bg-[#252021]/60 transition-colors">
+<div class="flex flex-col">
+<div class="flex items-center justify-between pb-6 border-b border-[#373335]/60 mb-6">
+<span class="font-stencil text-2xl font-bold text-[#FACA42]">04</span>
+<span class="font-mono text-[11px] tracking-widest uppercase text-[#8E8880]">PELEPASAN TIM &amp; PROTOKOL</span>
+</div>
+<div class="aspect-[4/3] overflow-hidden border border-[#373335] bg-[#252021] mb-6">
+<img alt="Grand Launching &amp; Doa Bersama SUVIFOR UNNES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRP6GgjGxiHW8Hg4-xrcMGXCQ384GVLTN96S5ihsdom9aaKpuxS3jb0JBIiI77tnfMY8zPU8gEsCeApMcvgfeWJNnq3aYKR_nlFhFF5BLRHnsNGh23HXsRVU99kWHnDDe2EG0jULPgU_ceEQ6Vn9mwEmkfVoGHYJb2TNWKqxKol4JVk7rsuS97KYXK7DJcIi0RP3GnVlVIkG6bV7UD-dZWIfxen3vsUoDzc1IcY1GcA9nG90e57syrZPotXq8bQW1yFg">
+</div>
+<h3 class="font-stencil text-xl text-[#FEFEFE] font-bold tracking-tight group-hover:text-[#FACA42] transition-colors uppercase">GRAND LAUNCHING &amp; DOA BERSAMA</h3>
+<p class="mt-3 text-[#CCC5B2] font-grotesk text-sm leading-relaxed">Pelepasan resmi kontingen riset, peluncuran wahana UAV prototipe terbaru, serta doa bersama sivitas akademika menjelang kompetisi.</p>
+</div>
+</article>
+<article class="p-8 border-b md:border-b-0 border-[#373335] lg:border-r flex flex-col justify-between group hover:bg-[#252021]/60 transition-colors">
+<div class="flex flex-col">
+<div class="flex items-center justify-between pb-6 border-b border-[#373335]/60 mb-6">
+<span class="font-stencil text-2xl font-bold text-[#FACA42]">05</span>
+<span class="font-mono text-[11px] tracking-widest uppercase text-[#8E8880]">KOMPETISI NASIONAL</span>
+</div>
+<div class="aspect-[4/3] overflow-hidden border border-[#373335] bg-[#252021] mb-6">
+<img alt="Kontes Robot Terbang Indonesia KRTI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYFZVWTC4ojT8jow2Wmvb_T8GPZZIufHT3gZIu5VTLigvP8zCnF4glmjRm3mzMhO9qEkRKmLjrSVayCjG0uQzV25tzJdLHzwTjRvFFNmcbDK7pk2CG9cMysQQY6jOVEWqasCh6qsa2DsCNBmG3V3hTpzSElgz8ie5kDt4ItHgcjxOr092MXaDw6HQFtpBgFgzl9o6B6HFWBgul_Ab-cejOsflTwJPS4R6h82AEjolsNORDbQF0mn2vZtKsyyZcOdxIPQ">
+</div>
+<h3 class="font-stencil text-xl text-[#FEFEFE] font-bold tracking-tight group-hover:text-[#FACA42] transition-colors uppercase">KRTI (KONTES ROBOT TERBANG INDONESIA)</h3>
+<p class="mt-3 text-[#CCC5B2] font-grotesk text-sm leading-relaxed">Kompetisi UAV bergengsi tingkat nasional oleh Belmawa Kemendiktisaintek mencakup divisi Racing Plane, Fixed Wing, dan Vertical Take-Off Landing (VTOL).</p>
+</div>
+</article>
+<article class="p-8 flex flex-col justify-between group hover:bg-[#252021]/60 transition-colors">
+<div class="flex flex-col">
+<div class="flex items-center justify-between pb-6 border-b border-[#373335]/60 mb-6">
+<span class="font-stencil text-2xl font-bold text-[#FACA42]">06</span>
+<span class="font-mono text-[11px] tracking-widest uppercase text-[#8E8880]">AJANG INTERNASIONAL</span>
+</div>
+<div class="aspect-[4/3] overflow-hidden border border-[#373335] bg-[#252021] mb-6">
+<img alt="TEKNOFEST International Competition SUVIFOR" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHp4EUG-qNjjn7gyT-DH-Qh_iTXcCd2_QrA2S5ji4vM8AcC_yL0eSklzSFTM4autjmbub5MvAmZR0ltNFhj4WAGRB-D2CPoAihe4GFuufpHEUva8vK53rw47ZJZTyyKm83TlxRjm2Aw3zqTD57sEOAyrVqxlj8rWFk6StYfvfBpwdGih9wSrvrTWyaM10uudVX4R1stRhyzleOyyRnlP1dT1d4suNCt9Kk5GgUSrcMVMjF0XC6RS7oV4-LCXG0xXV7zQ">
+</div>
+<h3 class="font-stencil text-xl text-[#FEFEFE] font-bold tracking-tight group-hover:text-[#FACA42] transition-colors uppercase">TEKNOFEST INTERNATIONAL</h3>
+<p class="mt-3 text-[#CCC5B2] font-grotesk text-sm leading-relaxed">Festival kedirgantaraan dan teknologi internasional di Turki, wadah unjuk kebolehan inovasi wahana nirawak serta riset tingkat global.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 4: OPEN RECRUITMENT & UPCOMING AGENDA -->
+<!-- ========================================================================= -->
+<section class="py-20 md:py-28 px-6 border-b border-[#373335] relative" data-purpose="recruitment-schedule" id="recruitment">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="inline-block bg-[#FACA42] text-[#1D1819] font-stencil text-xs tracking-widest font-black px-3 py-1 mb-6 rounded-none">
+            UPCOMING AGENDA // EVENT 2026
+          </div>
+<h2 class="font-stencil text-3xl sm:text-4xl lg:text-5xl text-[#FEFEFE] leading-tight tracking-tight">
+            ROBOTIC SCHOOL &amp; AGENDA 2026
+          </h2>
+<p class="mt-5 text-base text-[#CCC5B2] font-grotesk leading-relaxed">
+            Robotic School bertujuan memperkenalkan mahasiswa dalam dunia robotika khususnya UAV, diselenggarakan pada bulan November 2026.
+          </p>
+</div>
+<div class="mt-10 pt-8 border-t border-[#373335] flex flex-col sm:flex-row gap-4">
+<a class="px-6 py-3.5 bg-[#FACA42] border-2 border-[#FACA42] text-[#1D1819] font-mono text-xs font-bold tracking-wider rounded-none brutalist-btn-amber inline-flex items-center justify-center gap-2 hover:bg-white hover:border-white transition-all" href="https://wa.me/628882400429?text=Halo%20SUVIFOR%20UNNES,%20saya%20tertarik%20untuk%20bergabung" rel="noopener noreferrer" target="_blank">
+<span class="">DAFTAR VIA WHATSAPP</span>
+<span class="font-bold">→</span>
+</a>
+<a class="px-6 py-3.5 border-2 border-[#373335] bg-[#1D1819] text-[#FEFEFE] font-mono text-xs font-bold tracking-wider rounded-none brutalist-btn-outline inline-flex items-center justify-center gap-2 hover:border-[#FACA42] hover:text-[#FACA42] transition-all" href="https://forms.gle/suvifor-unnes-recruitment" rel="noopener noreferrer" target="_blank">
+<span class="">FORMULIR ONLINE</span>
+<span class="font-bold">↗</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="border-t border-[#373335] divide-y divide-[#373335]">
+<div class="py-7 grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
+<div class="sm:col-span-4">
+<span class="font-stencil text-xl text-[#FACA42] block">OKTOBER 2026</span>
+<span class="font-mono text-xs text-[#CCC5B2] uppercase tracking-wider">TAHAP 01</span>
+</div>
+<div class="sm:col-span-8">
+<h4 class="font-stencil text-lg text-[#FEFEFE] font-bold">OPEN RECRUITMENT</h4>
+<p class="mt-2 text-sm text-[#CCC5B2] font-grotesk leading-relaxed">
+                Regenerasi anggota baru mahasiswa UNNES semester 2 dan 4 untuk divisi mekanik, elektrik, dan software.
+              </p>
+</div>
+</div>
+<div class="py-7 grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
+<div class="sm:col-span-4">
+<span class="font-stencil text-xl text-[#FACA42] block">NOVEMBER 2026</span>
+<span class="font-mono text-xs text-[#CCC5B2] uppercase tracking-wider">TAHAP 02</span>
+</div>
+<div class="sm:col-span-8">
+<h4 class="font-stencil text-lg text-[#FEFEFE] font-bold">ROBOTIC SCHOOL &amp; PENDAS</h4>
+<p class="mt-2 text-sm text-[#CCC5B2] font-grotesk leading-relaxed">
+                Pelatihan intensif aerodinamika, perancangan, avionika, dan uji terbang prototipe secara langsung di lapangan.
+              </p>
+</div>
+</div>
+<div class="py-7 grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
+<div class="sm:col-span-4">
+<span class="font-stencil text-xl text-[#FACA42] block">DESEMBER 2026</span>
+<span class="font-mono text-xs text-[#CCC5B2] uppercase tracking-wider">TAHAP 03</span>
+</div>
+<div class="sm:col-span-8">
+<h4 class="font-stencil text-lg text-[#FEFEFE] font-bold">SELEKSI &amp; PERSIAPAN KRTI / TEKNOFEST</h4>
+<p class="mt-2 text-sm text-[#CCC5B2] font-grotesk leading-relaxed">
+                Pembentukan kontingen resmi divisi Racing Plane, Fixed Wing, dan VTOL untuk persiapan kontes kedirgantaraan nasional dan internasional.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 5: CONTACT & CALL TO ACTION -->
+<!-- ========================================================================= -->
+<section class="py-20 md:py-28 px-6 border-b border-[#373335] bg-[#1D1819] relative overflow-hidden" data-purpose="contact-cta" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-4xl">
+<h2 class="font-stencil text-3xl sm:text-5xl md:text-6xl text-[#FEFEFE] leading-tight tracking-tight">
+        INTERESTED IN COLLABORATING OR JOINING? <span class="text-[#FACA42]">LET'S FLY.</span>
+</h2>
+<p class="mt-5 text-base text-[#CCC5B2] font-grotesk max-w-2xl leading-relaxed">
+        Terbuka untuk kolaborasi riset antar-universitas, kemitraan industri kedirgantaraan, serta penerimaan mahasiswa baru yang bersemangat dalam dunia robotika terbang.
+      </p>
+</div>
+<div class="mt-10 flex flex-wrap gap-5 items-center font-mono text-xs uppercase tracking-wider">
+<a class="px-8 py-4 bg-[#FACA42] border-2 border-[#FACA42] text-[#1D1819] font-extrabold tracking-widest rounded-none brutalist-btn-amber inline-flex items-center gap-2.5 hover:bg-white hover:border-white transition-all" href="https://wa.me/628882400429?text=Halo%20SUVIFOR%20UNNES,%20saya%20tertarik%20untuk%20bergabung%20/%20berkolaborasi" rel="noopener noreferrer" target="_blank">
+<span class="">DAFTAR SEKARANG (WHATSAPP)</span>
+<span class="font-bold">→</span>
+</a>
+<a class="px-8 py-4 border-2 border-[#373335] bg-[#1D1819] text-[#FEFEFE] font-extrabold tracking-widest rounded-none brutalist-btn-outline hover:text-[#FACA42] hover:border-[#FACA42] inline-flex items-center gap-2.5 transition-all" href="https://forms.gle/suvifor-unnes-recruitment" rel="noopener noreferrer" target="_blank">
+<span class="">FORMULIR PENDAFTARAN ONLINE ↗</span>
+</a>
+</div>
+<div class="mt-16 pt-10 border-t border-[#373335] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 font-mono text-xs">
+<div>
+<span class="text-[#8E8880] block uppercase tracking-wider mb-2 font-semibold">PERSON IN CHARGE</span>
+<p class="text-[#FEFEFE] font-bold text-sm">Cycylia Kusumawardani</p>
+<a class="text-[#FACA42] hover:underline mt-1 block font-semibold" href="https://wa.me/628882400429">0888 2400 429</a>
+</div>
+<div>
+<span class="text-[#8E8880] block uppercase tracking-wider mb-2 font-semibold">OFFICIAL EMAIL</span>
+<a class="text-[#FEFEFE] hover:text-[#FACA42] transition-colors block truncate font-semibold" href="mailto:riptek.unnes@gmail.com">riptek.unnes@gmail.com</a>
+<span class="text-[#CCC5B2] block mt-0.5">cycylia_24@students.unnes.ac.id</span>
+</div>
+<div>
+<span class="text-[#8E8880] block uppercase tracking-wider mb-2 font-semibold">SOCIAL CHANNELS</span>
+<a class="text-[#FEFEFE] hover:text-[#FACA42] transition-colors font-bold block" href="https://instagram.com/suvifor" rel="noopener noreferrer" target="_blank">Instagram: @suvifor</a>
+<a class="text-[#CCC5B2] hover:text-[#FACA42] transition-colors block mt-0.5" href="https://tiktok.com/@suvifor" rel="noopener noreferrer" target="_blank">TikTok: @suvifor</a>
+</div>
+<div>
+<span class="text-[#8E8880] block uppercase tracking-wider mb-2 font-semibold">HEADQUARTERS</span>
+<p class="text-[#FEFEFE] font-medium">Gedung UKM Lt. 2 UNNES</p>
+<span class="text-[#CCC5B2] block mt-0.5 text-[11px] leading-snug">Jl. Raya Banaran, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Minimalist Brutalist Footer -->
+<footer class="bg-[#1D1819] py-10 px-6 border-t border-[#373335]" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-xs text-[#CCC5B2]">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-[#FACA42]"></span>
+<span class="text-[#FEFEFE] font-stencil font-bold tracking-wider">SUVIFOR UNNES</span>
+<span class="">© 2026 SUVIFOR UNNES • UKM RIPTEK UNIVERSITAS NEGERI SEMARANG. ALL RIGHTS RESERVED.</span>
+</div>
+<div class="flex items-center gap-6 text-[#CCC5B2]">
+<a class="hover:text-[#FACA42] transition-colors" href="https://instagram.com/suvifor" rel="noopener noreferrer" target="_blank">INSTAGRAM</a>
+<span class="text-[#373335]">•</span>
+<a class="hover:text-[#FACA42] transition-colors" href="https://riptek.unnes.ac.id" rel="noopener noreferrer" target="_blank">UKM RIPTEK UNNES</a>
+<span class="text-[#373335]">•</span>
+<a class="text-[#FACA42] hover:underline font-bold" href="#hero">[ TOP ↑ ]</a>
+</div>
+</div>
+</footer>
+<!-- Bayucaraka-Style Slide-Down Curtain Menu Script -->
+<script>
+  const openMenuBtn = document.getElementById('open-menu-btn');
+  const closeMenuBtn = document.getElementById('close-menu-btn');
+  const navOverlay = document.getElementById('nav-overlay');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function openMenu() {
+    navOverlay.classList.add('menu-open');
+    navOverlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('overflow-hidden');
+  }
+
+  function closeMenu() {
+    navOverlay.classList.remove('menu-open');
+    navOverlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('overflow-hidden');
+  }
+
+  openMenuBtn.addEventListener('click', openMenu);
+  closeMenuBtn.addEventListener('click', closeMenu);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      closeMenu();
+      if (targetId && targetId.startsWith('#')) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          setTimeout(() => {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }, 320);
+        }
+      }
+    });
+  });
+
+  // Support ESC key to dismiss menu
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navOverlay.classList.contains('menu-open')) {
+      closeMenu();
+    }
+  });
+</script>
+
+
+</body></html>
