@@ -29,7 +29,7 @@ npm run preview
 - `design.md`: acuan slicing dari Stitch.
 - `references/stitch-original.txt`: copy Stitch asli, disimpan utuh.
 
-Route `/` menampilkan halaman sementara; route lainnya menampilkan 404. Landing page lengkap menunggu kartu kanban berikutnya. Hosting produksi harus mengarahkan permintaan route aplikasi ke `index.html` agar BrowserRouter bekerja saat halaman dimuat langsung.
+Route `/` menampilkan Navbar dan Hero; route lainnya menampilkan 404. Section lain menunggu kartu kanban berikutnya. Hosting produksi harus mengarahkan permintaan route aplikasi ke `index.html` agar BrowserRouter bekerja saat halaman dimuat langsung.
 
 ## Status kartu Setup React + Vite
 
@@ -47,3 +47,10 @@ Acuan desain dan aset visual: [Proyek SUVIFOR UNNES di Stitch](https://stitch.wi
 ## Navbar dan navigasi section
 
 Navbar terpisah tersedia di src/components/Navbar.jsx dengan menu layar penuh sesuai Stitch. React Router menangani tautan /#hero, /#about, /#programs, /#recruitment, dan /#contact. Navigasi mendukung smooth scroll, tautan langsung, Escape, fokus keyboard, serta preferensi reduced motion. Section selain hero masih berupa penanda sementara sampai kartu slicing masing-masing dikerjakan. Pada mobile, CTA header disembunyikan untuk memberi ruang logo dan tombol; Recruitment tetap tersedia dalam menu.
+
+## Hero / Home
+
+Hero tersedia di `src/components/Hero.jsx`: headline dan deskripsi mengikuti copy Stitch, CTA menuju Recruitment dan Programs, serta foto lokal `pendas-1` menampilkan tim bersama UAV. Foto ditambahkan di bawah copy sesuai kartu Hero yang meminta visual utama; referensi HTML aslinya berupa hero teks. Gambar mempertahankan proporsi asli dan diprioritaskan saat dimuat. Strip informasi di bawah hero dibuat statis agar tetap mudah dibaca.
+
+Validasi: lint dan build berhasil; tampilan desktop dan mobile 375 px diperiksa, gambar termuat, serta kedua CTA berhasil menuju section terkait. Section lain tetap menunggu kartu berikutnya.
+
