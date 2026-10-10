@@ -1,3 +1,3 @@
 export default function PageShell({ children }) {
-  return <main className="page-shell">{children}</main>
+  return <div className="page-shell">{children}</div>
 }

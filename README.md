@@ -43,3 +43,7 @@ File lock npm disertakan untuk instalasi konsisten. Referensi desain belum diuba
 ## Aset visual
 
 Acuan desain dan aset visual: [Proyek SUVIFOR UNNES di Stitch](https://stitch.withgoogle.com/projects/8135422896203371150). Proyek ini sama dengan copy Stitch yang disimpan di [references/stitch-original.txt](references/stitch-original.txt) dan menjadi referensi implementasi bertahap sesuai kanban.
+
+## Navbar dan navigasi section
+
+Navbar terpisah tersedia di src/components/Navbar.jsx dengan menu layar penuh sesuai Stitch. React Router menangani tautan /#hero, /#about, /#programs, /#recruitment, dan /#contact. Navigasi mendukung smooth scroll, tautan langsung, Escape, fokus keyboard, serta preferensi reduced motion. Section selain hero masih berupa penanda sementara sampai kartu slicing masing-masing dikerjakan. Pada mobile, CTA header disembunyikan untuk memberi ruang logo dan tombol; Recruitment tetap tersedia dalam menu.
