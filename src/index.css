@@ -11,3 +11,49 @@ p { color: var(--color-muted); line-height: 1.6; }
 .eyebrow { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; }
 a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 6px; }
 ::selection { background: var(--color-accent); color: var(--color-background); }
+
+/* Flight telemetry scrollbar: native drag, wheel and keyboard behavior. */
+html { scrollbar-gutter: stable; }
+* { scrollbar-width: thin; scrollbar-color: #faca42 #171314; }
+@supports selector(::-webkit-scrollbar) {
+  * { scrollbar-width: auto; scrollbar-color: auto; }
+  ::-webkit-scrollbar { width: 14px; height: 14px; }
+  ::-webkit-scrollbar-track {
+    background: repeating-linear-gradient(to bottom, transparent 0 23px, #faca4229 23px 24px), #171314;
+    border-left: 1px solid #373335;
+  }
+  ::-webkit-scrollbar-thumb {
+    min-height: 56px;
+    border: 3px solid #171314;
+    border-radius: 2px;
+    background: repeating-linear-gradient(135deg, transparent 0 6px, #1d181938 6px 8px), linear-gradient(#ffe59b, #faca42 45%, #c49a20);
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: #ffe59b; background-clip: padding-box; }
+  ::-webkit-scrollbar-thumb:active { background: #fff1c2; background-clip: padding-box; }
+  ::-webkit-scrollbar-corner { background: #171314; }
+  @media (pointer: coarse) {
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-thumb { border-width: 2px; }
+  }
+}
+/* The thin gold flight line fills as the page progresses. */
+@supports (animation-timeline: scroll()) {
+  .page-scroll-progress {
+    position: fixed;
+    z-index: 60;
+    inset: 0 0 auto;
+    height: 3px;
+    pointer-events: none;
+    transform-origin: left;
+    background: linear-gradient(90deg, #c49a20, #faca42 75%, #fff1c2);
+    box-shadow: 0 0 8px #faca4266;
+    animation: page-flight-progress linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+@keyframes page-flight-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (forced-colors: active) {
+  * { scrollbar-color: auto; }
+  .page-scroll-progress { display: none; }
+}

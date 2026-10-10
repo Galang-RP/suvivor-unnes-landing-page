@@ -7,6 +7,7 @@ import SectionNavigation from './components/SectionNavigation.jsx'
 export default function App() {
   return (
     <BrowserRouter>
+      <div className="page-scroll-progress" aria-hidden="true" />
       <Navbar />
       <SectionNavigation />
       <Routes>
