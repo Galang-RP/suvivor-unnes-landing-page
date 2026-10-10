@@ -54,3 +54,7 @@ Hero tersedia di `src/components/Hero.jsx`: headline dan deskripsi mengikuti cop
 
 Validasi: lint dan build berhasil; tampilan desktop dan mobile 375 px diperiksa, gambar termuat, serta kedua CTA berhasil menuju section terkait. Section lain tetap menunggu kartu berikutnya.
 
+
+## About
+
+`src/components/About.jsx` menggantikan penanda sementara About di bawah Hero. Visi, profil, dan tiga fokus kegiatan mengikuti copy Stitch. Foto lokal Grand Launching ditambahkan sebagai gambar pendukung sesuai kartu About, menggunakan lazy loading dan proporsi asli. Layout fokus kegiatan memakai tiga kolom pada desktop dan satu kolom pada mobile.
