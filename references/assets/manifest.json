@@ -1,0 +1,123 @@
+[
+  {
+    "id": "grand-launching-1",
+    "source": "Kegiatan Suvifor\\Grand Launching 1 (1) - CYCYLIA KUSUMAWARDANI.jpg",
+    "file": "grand-launching-1.webp",
+    "width": 1600,
+    "height": 1067,
+    "originalWidth": 6000,
+    "originalHeight": 4000,
+    "originalBytes": 2469695,
+    "optimizedBytes": 117800
+  },
+  {
+    "id": "grand-launching-2",
+    "source": "Kegiatan Suvifor\\Grand Launching 2 (1) - CYCYLIA KUSUMAWARDANI.jpg",
+    "file": "grand-launching-2.webp",
+    "width": 1600,
+    "height": 1067,
+    "originalWidth": 6000,
+    "originalHeight": 4000,
+    "originalBytes": 1502117,
+    "optimizedBytes": 136942
+  },
+  {
+    "id": "grand-launching-3",
+    "source": "Kegiatan Suvifor\\Grand Launching 3 (1) - CYCYLIA KUSUMAWARDANI.jpg",
+    "file": "grand-launching-3.webp",
+    "width": 1600,
+    "height": 1067,
+    "originalWidth": 6000,
+    "originalHeight": 4000,
+    "originalBytes": 935793,
+    "optimizedBytes": 44224
+  },
+  {
+    "id": "krti",
+    "source": "Kegiatan Suvifor\\KRTI - CYCYLIA KUSUMAWARDANI.jpeg",
+    "file": "krti.webp",
+    "width": 960,
+    "height": 1280,
+    "originalWidth": 960,
+    "originalHeight": 1280,
+    "originalBytes": 170030,
+    "optimizedBytes": 153496
+  },
+  {
+    "id": "open-recruitment-1",
+    "source": "Kegiatan Suvifor\\OPREC 1 - CYCYLIA KUSUMAWARDANI.jpg",
+    "file": "open-recruitment-1.webp",
+    "width": 360,
+    "height": 640,
+    "originalWidth": 360,
+    "originalHeight": 640,
+    "originalBytes": 101999,
+    "optimizedBytes": 43032
+  },
+  {
+    "id": "open-recruitment-2",
+    "source": "Kegiatan Suvifor\\OPREC 2 - CYCYLIA KUSUMAWARDANI.jpg",
+    "file": "open-recruitment-2.webp",
+    "width": 360,
+    "height": 640,
+    "originalWidth": 360,
+    "originalHeight": 640,
+    "originalBytes": 109660,
+    "optimizedBytes": 46588
+  },
+  {
+    "id": "pendas-1",
+    "source": "Kegiatan Suvifor\\pendas 1 - CYCYLIA KUSUMAWARDANI.jpeg",
+    "file": "pendas-1.webp",
+    "width": 1600,
+    "height": 1200,
+    "originalWidth": 1600,
+    "originalHeight": 1200,
+    "originalBytes": 474566,
+    "optimizedBytes": 440270
+  },
+  {
+    "id": "pendas-3",
+    "source": "Kegiatan Suvifor\\pendas 3 - CYCYLIA KUSUMAWARDANI.jpg",
+    "file": "pendas-3.webp",
+    "width": 360,
+    "height": 640,
+    "originalWidth": 360,
+    "originalHeight": 640,
+    "originalBytes": 152151,
+    "optimizedBytes": 51060
+  },
+  {
+    "id": "robotic-school-1",
+    "source": "Kegiatan Suvifor\\roboschool 1 - CYCYLIA KUSUMAWARDANI.JPG",
+    "file": "robotic-school-1.webp",
+    "width": 1600,
+    "height": 899,
+    "originalWidth": 5184,
+    "originalHeight": 2912,
+    "originalBytes": 2804682,
+    "optimizedBytes": 167990
+  },
+  {
+    "id": "robotic-school-2",
+    "source": "Kegiatan Suvifor\\roboschool 2 - CYCYLIA KUSUMAWARDANI.JPG",
+    "file": "robotic-school-2.webp",
+    "width": 1600,
+    "height": 899,
+    "originalWidth": 5184,
+    "originalHeight": 2912,
+    "originalBytes": 2916491,
+    "optimizedBytes": 102740
+  },
+  {
+    "id": "suvifor-logo",
+    "source": "Logo Suvifor.jpg",
+    "file": "suvifor-logo.webp",
+    "width": 817,
+    "height": 817,
+    "originalWidth": 817,
+    "originalHeight": 817,
+    "originalBytes": 54625,
+    "optimizedBytes": 23252
+  }
+]

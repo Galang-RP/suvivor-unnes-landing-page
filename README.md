@@ -39,3 +39,7 @@ Route `/` menampilkan halaman sementara; route lainnya menampilkan 404. Landing 
 - Struktur folder modular tersedia.
 
 File lock npm disertakan untuk instalasi konsisten. Referensi desain belum diubah menjadi seluruh halaman website pada tahap ini.
+
+## Aset visual
+
+Katalog dan panduan pemakaian: [references/assets/README.md](references/assets/README.md). Import aset melalui src/assets/index.js; semua gambar web telah dioptimalkan.
