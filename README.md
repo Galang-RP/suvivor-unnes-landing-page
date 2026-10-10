@@ -50,7 +50,7 @@ Navbar terpisah tersedia di src/components/Navbar.jsx dengan menu layar penuh se
 
 ## Hero / Home
 
-Hero tersedia di `src/components/Hero.jsx`: headline dan deskripsi mengikuti copy Stitch, CTA menuju Recruitment dan Programs, serta foto lokal `pendas-1` menampilkan tim bersama UAV. Foto ditambahkan di bawah copy sesuai kartu Hero yang meminta visual utama; referensi HTML aslinya berupa hero teks. Gambar mempertahankan proporsi asli dan diprioritaskan saat dimuat. Strip informasi di bawah hero dibuat statis agar tetap mudah dibaca.
+Hero tersedia di `src/components/Hero.jsx`: headline dan deskripsi mengikuti copy Stitch, CTA menuju Recruitment dan Programs, serta foto lokal `pendas-1` menampilkan tim bersama UAV. Foto ditambahkan di bawah copy sesuai kartu Hero yang meminta visual utama; referensi HTML aslinya berupa hero teks. Gambar mempertahankan proporsi asli dan diprioritaskan saat dimuat. Strip informasi bergerak dari kanan ke kiri secara berulang, dengan tombol jeda untuk desktop/mobile dan tampilan statis saat reduced motion aktif.
 
 Validasi: lint dan build berhasil; tampilan desktop dan mobile 375 px diperiksa, gambar termuat, serta kedua CTA berhasil menuju section terkait. Section lain tetap menunggu kartu berikutnya.
 

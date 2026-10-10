@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { assets } from '../assets'
 import './Hero.css'
 
 export default function Hero() {
+  const [tickerPaused, setTickerPaused] = useState(false)
   return <>
     <section id="hero" className="hero" tabIndex={-1} aria-labelledby="hero-title">
       <div className="hero-container">
@@ -21,10 +23,18 @@ export default function Hero() {
         </figure>
       </div>
     </section>
-    <aside className="hero-ticker" aria-label="Fokus SUVIFOR">
-      <span>SUVIFOR UNNES — SPIRIT IN INNOVATION</span><span aria-hidden="true">✱</span>
-      <span>RESEARCH, INNOVATION &amp; UAV DEVELOPMENT</span><span aria-hidden="true">✱</span>
-      <span>KRTI &amp; TEKNOFEST SQUAD</span>
+    <aside className={`hero-ticker${tickerPaused ? ' is-paused' : ''}`} aria-label="Fokus SUVIFOR">
+      <div className="hero-ticker-window">
+        <div className="hero-ticker-track">
+          {[0, 1].map(copy => (
+            <div className="hero-ticker-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
+              <span>SUVIFOR UNNES — SPIRIT IN INNOVATION</span><span aria-hidden="true">✱</span>
+              <span>RESEARCH, INNOVATION &amp; UAV DEVELOPMENT</span><span aria-hidden="true">✱</span>
+              <span>KRTI &amp; TEKNOFEST SQUAD</span><span aria-hidden="true">✱</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </aside>
   </>
 }

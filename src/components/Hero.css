@@ -18,7 +18,15 @@
 .hero-visual img { display: block; width: 100%; height: auto; max-height: 680px; object-fit: contain; }
 .hero-visual figcaption { padding: 16px 20px; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--color-muted); font: 10px/1.6 var(--font-mono); letter-spacing: .08em; }
 .hero-visual figcaption span:first-child { color: var(--color-accent); }
-.hero-ticker { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 16px 24px; padding: 16px 24px; background: var(--color-accent); color: var(--color-background); font: 800 12px/1.5 var(--font-display); text-align: center; }
+.hero-ticker { display: flex; min-width: 0; background: var(--color-accent); color: var(--color-background); font: 800 12px/1.5 var(--font-display); }
+.hero-ticker-window { flex: 1; min-width: 0; overflow: hidden; display: flex; align-items: center; }
+.hero-ticker-track { display: flex; width: max-content; animation: hero-marquee 35s linear infinite; }
+.hero-ticker-group { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-around; gap: 24px; padding: 16px 12px; min-width: 100vw; white-space: nowrap; }
+.hero-ticker-toggle { flex: 0 0 48px; border: 0; border-left: 1px solid #1d181940; border-radius: 0; background: var(--color-accent); color: var(--color-background); cursor: pointer; font-size: 16px; min-height: 48px; }
+.hero-ticker-toggle:focus-visible { outline: 2px solid var(--color-background); outline-offset: -5px; }
+.hero-ticker.is-paused .hero-ticker-track { animation-play-state: paused; }
+@media(hover: hover) { .hero-ticker-window:hover .hero-ticker-track { animation-play-state: paused; } }
+@keyframes hero-marquee { to { transform: translateX(-50%); } }
 @media(max-width:640px) {
  .hero { padding: 96px 24px 64px; }
  .hero h1 { font-size: clamp(25px, 6vw, 38px); overflow-wrap: anywhere; }
@@ -27,6 +35,12 @@
  .hero-button { width: 100%; padding-inline: 16px; }
  .hero-visual { margin-top: 40px; }
  .hero-ticker { font-size: 10px; }
- .hero-ticker > span[aria-hidden] { display: none; }
+ .hero-ticker-group { gap: 16px; padding: 14px 8px; }
 }
 @media(prefers-reduced-motion: reduce) { .hero-button { transition: none; } }
+
+@media(prefers-reduced-motion: reduce) {
+ .hero-ticker-track { animation: none; width: 100%; }
+ .hero-ticker-group { min-width: 0; width: 100%; flex-wrap: wrap; white-space: normal; text-align: center; }
+ .hero-ticker-group[aria-hidden="true"], .hero-ticker-toggle { display: none; }
+}
