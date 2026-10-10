@@ -42,4 +42,4 @@ File lock npm disertakan untuk instalasi konsisten. Referensi desain belum diuba
 
 ## Aset visual
 
-Katalog dan panduan pemakaian: [references/assets/README.md](references/assets/README.md). Import aset melalui src/assets/index.js; semua gambar web telah dioptimalkan.
+Acuan desain dan aset visual: [Proyek SUVIFOR UNNES di Stitch](https://stitch.withgoogle.com/projects/8135422896203371150). Proyek ini sama dengan copy Stitch yang disimpan di [references/stitch-original.txt](references/stitch-original.txt) dan menjadi referensi implementasi bertahap sesuai kanban.
