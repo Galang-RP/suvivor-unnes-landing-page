@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { assets } from '../assets'
 import './Navbar.css'
 
@@ -13,9 +13,31 @@ export default function Navbar() {
   const dialog = useRef(null)
   const trigger = useRef(null)
   const location = useLocation()
+  const navigate = useNavigate()
+  const exitAnimation = useRef(null)
 
-  function closeMenu() {
-    dialog.current.close()
+  function closeMenu(afterClose) {
+    const element = dialog.current
+    if (!element.open || exitAnimation.current) return
+    const finish = () => {
+      element.close()
+      if (typeof afterClose === 'function') afterClose()
+    }
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      finish()
+      return
+    }
+    // Start at the current position, including when opening is interrupted.
+    const animation = element.animate([
+      { transform: getComputedStyle(element).transform },
+      { transform: 'translateY(-100%)' },
+    ], { duration: 420, easing: 'cubic-bezier(.4, 0, .2, 1)', fill: 'forwards' })
+    exitAnimation.current = animation
+    animation.finished.then(() => {
+      finish()
+      animation.cancel()
+      exitAnimation.current = null
+    }).catch(() => {})
   }
 
   useEffect(() => {
@@ -35,6 +57,8 @@ export default function Navbar() {
     button.addEventListener('click', open)
     element.addEventListener('close', unlock)
     return () => {
+      exitAnimation.current?.cancel()
+      exitAnimation.current = null
       button.removeEventListener('click', open)
       element.removeEventListener('close', unlock)
       if (element.open) { element.close(); unlock() }
@@ -42,8 +66,13 @@ export default function Navbar() {
   }, [])
 
   function sectionLink(id, label, className) {
-    return <Link className={className} to={`/#${id}`} onClick={() => {
-      if (dialog.current.open) closeMenu()
+    return <Link className={className} to={`/#${id}`} onClick={(event) => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+      if (dialog.current.open) {
+        event.preventDefault()
+        closeMenu(() => navigate(`/#${id}`))
+        return
+      }
       // A repeated click on the current hash must also return to that section.
       if (location.pathname === '/' && location.hash === `#${id}`) {
         const target = document.getElementById(id)
@@ -66,7 +95,7 @@ export default function Navbar() {
         {sectionLink('recruitment', <>LET’S FLY <span aria-hidden="true">↗</span></>, 'nav-cta')}
       </div>
     </header>
-    <dialog ref={dialog} id="navigation-menu" className="navigation-menu" aria-label="Menu navigasi utama">
+    <dialog ref={dialog} id="navigation-menu" className="navigation-menu" aria-label="Menu navigasi utama" onCancel={(event) => { event.preventDefault(); closeMenu() }}>
       <div className="overlay-header"><div className="navbar-bar">
         {brand()}
         <button type="button" className="menu-toggle close-toggle" onClick={closeMenu} autoFocus aria-label="Tutup menu navigasi"><span aria-hidden="true">✕</span> CLOSE</button>
