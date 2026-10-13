@@ -57,3 +57,12 @@ html { scrollbar-gutter: stable; }
   * { scrollbar-color: auto; }
   .page-scroll-progress { display: none; }
 }
+
+/* Shared blueprint texture ties the content sections together. */
+main > section:not(.hero) {
+  background-image: linear-gradient(#faca4208 1px, transparent 1px), linear-gradient(90deg, #faca4208 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+@media(max-width:767px) {
+  main > section:not(.hero) { background-size: 40px 40px; }
+}

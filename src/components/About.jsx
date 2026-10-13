@@ -16,6 +16,7 @@ export default function About() {
           <h2 id="about-title">WADAH PENELITIAN, PENGEMBANGAN DAN PRODUKSI TEKNOLOGI WAHANA TERBANG TANPA AWAK.</h2>
           <p className="about-description">Semarang State University Flying Object Research (SUVIFOR) merupakan tim riset UAV di bawah naungan UKM Rekayasa Ilmu Pengetahuan dan Teknologi (RIPTEK) Universitas Negeri Semarang. SUVIFOR menjadi wadah mahasiswa yang memiliki minat dan dedikasi dalam bidang UAV dan teknologi kedirgantaraan melalui kegiatan penelitian, pengembangan, edukasi, dan pelatihan. Fokus riset meliputi desain aerodinamika, sistem navigasi otomatis, serta penerapan kecerdasan buatan untuk menghasilkan UAV yang inovatif, efisien, dan aplikatif.</p>
         </div>
+        <div className="about-details">
         <figure className="about-photo">
           <img {...assets['grand-launching-2']} loading="lazy" decoding="async" />
           <figcaption>TIM SUVIFOR UNNES / GRAND LAUNCHING</figcaption>
@@ -27,6 +28,7 @@ export default function About() {
               <p>{description}</p>
             </article>
           ))}
+        </div>
         </div>
       </div>
     </section>
