@@ -3,12 +3,12 @@
 .about-label { display: inline-block; margin: 0 0 32px; padding: 5px 14px; background: var(--color-accent); color: var(--color-background); font: 800 12px/1.5 var(--font-display); letter-spacing: .1em; }
 .about-intro { max-width: 1024px; }
 .about h2 { margin: 0; color: var(--color-text); font: 800 clamp(24px, 3vw, 36px)/1.4 var(--font-display); letter-spacing: -.025em; overflow-wrap: anywhere; }
-.about-description { max-width: 896px; margin: 24px 0 0; color: var(--color-muted); font-size: 18px; line-height: 1.65; }
+.about-description { max-width: 896px; margin: 0; color: var(--color-muted); font-size: 18px; line-height: 1.65; }
 .about-photo { min-width: 0; margin: 0; border: 1px solid var(--color-border); }
 .about-photo img { display: block; width: 100%; height: auto; }
 .about-photo figcaption { padding: 14px 20px; border-top: 1px solid var(--color-border); color: var(--color-muted); font: 11px/1.6 var(--font-mono); letter-spacing: .08em; }
-.about-details { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: center; gap: clamp(32px, 4vw, 64px); margin-top: 48px; }
-.about-focus { display: grid; gap: 28px; min-width: 0; }
+.about-details { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(32px, 4vw, 64px); margin-top: 48px; }
+.about-focus { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--color-border); min-width: 0; }
 .about-focus article { border-left: 2px solid var(--color-accent); padding-left: 20px; }
 .about-focus h3 { margin: 0 0 8px; color: var(--color-accent); font: 700 12px/1.6 var(--font-mono); letter-spacing: .05em; }
 .about-focus p { margin: 0; font-size: 14px; line-height: 1.65; }
@@ -17,9 +17,9 @@
  .about h2 { font-size: clamp(17px, 5.2vw, 24px); }
  .about-description { font-size: 16px; }
  .about-label { margin-bottom: 24px; }
- .about-description { margin-top: 20px; }
+
  .about-details { margin-top: 28px; gap: 24px; }
- .about-focus { gap: 24px; }
+ .about-focus { grid-template-columns: 1fr; gap: 24px; margin-top: 28px; padding-top: 24px; }
 
  .about-photo figcaption { padding-inline: 14px; font-size: 10px; }
 }

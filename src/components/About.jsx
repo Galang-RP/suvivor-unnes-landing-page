@@ -14,13 +14,14 @@ export default function About() {
         <p className="about-label">VISION &amp; IDENTITY</p>
         <div className="about-intro">
           <h2 id="about-title">WADAH PENELITIAN, PENGEMBANGAN DAN PRODUKSI TEKNOLOGI WAHANA TERBANG TANPA AWAK.</h2>
-          <p className="about-description">Semarang State University Flying Object Research (SUVIFOR) merupakan tim riset UAV di bawah naungan UKM Rekayasa Ilmu Pengetahuan dan Teknologi (RIPTEK) Universitas Negeri Semarang. SUVIFOR menjadi wadah mahasiswa yang memiliki minat dan dedikasi dalam bidang UAV dan teknologi kedirgantaraan melalui kegiatan penelitian, pengembangan, edukasi, dan pelatihan. Fokus riset meliputi desain aerodinamika, sistem navigasi otomatis, serta penerapan kecerdasan buatan untuk menghasilkan UAV yang inovatif, efisien, dan aplikatif.</p>
         </div>
         <div className="about-details">
+          <p className="about-description">Semarang State University Flying Object Research (SUVIFOR) merupakan tim riset UAV di bawah naungan UKM Rekayasa Ilmu Pengetahuan dan Teknologi (RIPTEK) Universitas Negeri Semarang. SUVIFOR menjadi wadah mahasiswa yang memiliki minat dan dedikasi dalam bidang UAV dan teknologi kedirgantaraan melalui kegiatan penelitian, pengembangan, edukasi, dan pelatihan. Fokus riset meliputi desain aerodinamika, sistem navigasi otomatis, serta penerapan kecerdasan buatan untuk menghasilkan UAV yang inovatif, efisien, dan aplikatif.</p>
         <figure className="about-photo">
           <img {...assets['grand-launching-2']} loading="lazy" decoding="async" />
           <figcaption>TIM SUVIFOR UNNES / GRAND LAUNCHING</figcaption>
         </figure>
+        </div>
         <div className="about-focus">
           {focusAreas.map(([title, description]) => (
             <article key={title}>
@@ -28,7 +29,6 @@ export default function About() {
               <p>{description}</p>
             </article>
           ))}
-        </div>
         </div>
       </div>
     </section>
