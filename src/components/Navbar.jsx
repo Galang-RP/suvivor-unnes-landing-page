@@ -220,16 +220,16 @@ export default function Navbar() {
           <div className="menu-metadata">
             <span>TEAM: SUVIFOR UNNES</span>
             <span>LOCATION: GEDUNG PKMU LT. 2 UNNES, SEMARANG</span>
-            <span>EMAIL: CYCYLIA_24@STUDENTS.UNNES.AC.ID</span>
+            <span>EMAIL: suvifor.unnes17@gmail.com</span>
           </div>
         </div>
         <footer className="menu-footer">
           <div>
             <a href="mailto:cycylia_24@students.unnes.ac.id">
-              cycylia_24@students.unnes.ac.id
+              suvifor.unnes17@gmail.com
             </a>
-            <a href="https://wa.me/628882400429">+62 888 2400 429</a>
-            <small>(PIC Cycylia Kusumawardani)</small>
+            <a href="https://wa.me/6281244091033">+62 812 4409 1033</a>
+            <small>(PIC Rifqi Mulia Pohan)</small>
           </div>
           <div>
             <a
@@ -240,10 +240,10 @@ export default function Navbar() {
               Instagram (@suvifor)
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              LinkedIn
+              LinkedIn (Suvifor Unnes)
             </a>
             <a href="https://youtube.com" target="_blank" rel="noreferrer">
-              YouTube
+              YouTube (@suvifor)
             </a>
           </div>
           <div>

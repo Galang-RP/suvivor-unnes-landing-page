@@ -1,17 +1,21 @@
-import Hero from '../components/Hero.jsx'
-import About from '../components/About.jsx'
+import Hero from "../components/Hero.jsx";
+import About from "../components/About.jsx";
+import WorkPrograms from "../components/WorkPrograms.jsx";
+import Agenda from "../components/Agenda.jsx";
+import Contact from "../components/Contact.jsx";
+import Footer from "../components/Footer.jsx";
 
 export default function HomePage() {
   return (
-    <main>
-      <Hero />
-      <About />
-      {['programs', 'recruitment', 'contact'].map(id => (
-        <section key={id} id={id} tabIndex={-1} className="section-placeholder" aria-labelledby={`${id}-title`}>
-          <h2 id={`${id}-title`}>{id.toUpperCase()}</h2>
-          <p>Bagian ini akan dikembangkan pada tahap berikutnya.</p>
-        </section>
-      ))}
-    </main>
-  )
+    <>
+      <main>
+        <Hero />
+        <About />
+        <WorkPrograms />
+        <Agenda />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }

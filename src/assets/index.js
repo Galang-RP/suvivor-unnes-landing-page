@@ -22,4 +22,5 @@ export const assets = {
   'robotic-school-1': { src: robotic_school_1, width: 1600, height: 899, alt: "Peserta mengikuti kegiatan Robotic School SUVIFOR" },
   'robotic-school-2': { src: robotic_school_2, width: 1600, height: 899, alt: "Pemaparan materi dalam Robotic School SUVIFOR" },
   'suvifor-logo': { src: suvifor_logo, width: 817, height: 817, alt: "Logo SUVIFOR UNNES" },
+  'teknofest': { src: '', width: 1600, height: 900, alt: "TEKNOFEST International Competition SUVIFOR" },
 }

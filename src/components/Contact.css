@@ -1,0 +1,228 @@
+.contact {
+  padding: 128px 24px 112px;
+  border-bottom: 1px solid var(--color-border);
+  background: #1d1819;
+}
+
+.contact-container {
+  max-width: 1232px;
+  margin-inline: auto;
+}
+
+.contact-header {
+  max-width: 768px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.contact-header h2 {
+  margin: 0 0 20px;
+  color: #fefefe;
+  font: 800 clamp(30px, 4vw, 56px)/1.1 var(--font-display);
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.contact-header h2 span {
+  color: #faca42;
+}
+
+.contact-description {
+  margin: 0;
+  color: #ccc5b2;
+  font: 400 16px/1.7 var(--font-body);
+  max-width: 672px;
+  margin-inline: auto;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .contact-actions {
+    flex-direction: row;
+  }
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 16px 32px;
+  border: 2px solid;
+  font: 800 12px/1.5 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 #faca42;
+  transition:
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    background 0.16s,
+    border-color 0.16s,
+    color 0.16s;
+}
+
+.contact-button-primary {
+  background: #faca42;
+  border-color: #faca42;
+  color: #1d1819;
+  box-shadow: 4px 4px 0 #ffffff;
+}
+
+.contact-button-secondary {
+  background: #1d1819;
+  border-color: #373335;
+  color: #fefefe;
+  box-shadow: 4px 4px 0 #faca42;
+}
+
+@media (hover: hover) {
+  .contact-button:hover {
+    transform: translate(3px, 3px);
+  }
+  .contact-button-primary:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 2px 2px 0 #ffffff;
+  }
+  .contact-button-secondary:hover {
+    color: #faca42;
+    border-color: #faca42;
+    box-shadow: 2px 2px 0 #faca42;
+  }
+}
+
+.contact-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #faca42;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-button {
+    transition: none;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid #373335;
+}
+
+@media (min-width: 640px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-section-label {
+  color: #8e8880;
+  font: 600 11px/1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-name {
+  color: #fefefe;
+  font: 700 14px/1.5 var(--font-body);
+}
+
+.contact-phone {
+  color: #faca42;
+  font: 600 13px/1.5 var(--font-body);
+  text-decoration: none;
+}
+
+.contact-phone:hover {
+  text-decoration: underline;
+}
+
+.contact-email {
+  color: #fefefe;
+  font: 600 13px/1.5 var(--font-body);
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  color: #faca42;
+}
+
+.contact-email + .contact-email {
+  color: #ccc5b2;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.contact-link {
+  color: #fefefe;
+  font: 700 13px/1.5 var(--font-body);
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #faca42;
+}
+
+.contact-link + .contact-link {
+  color: #ccc5b2;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.contact-text {
+  color: #fefefe;
+  font: 500 14px/1.5 var(--font-body);
+}
+
+.contact-address {
+  color: #ccc5b2;
+  font: 400 11px/1.5 var(--font-mono);
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding-block: 80px;
+  }
+  .contact-header h2 {
+    font-size: clamp(20px, 5.5vw, 28px);
+  }
+  .contact-description {
+    font-size: 15px;
+  }
+  .contact-actions {
+    margin-top: 32px;
+  }
+  .contact-button {
+    width: 100%;
+    padding-inline: 16px;
+  }
+  .contact-grid {
+    margin-top: 48px;
+    padding-top: 32px;
+    gap: 24px;
+  }
+}
