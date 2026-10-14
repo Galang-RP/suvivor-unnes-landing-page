@@ -225,7 +225,7 @@ export default function Navbar() {
         </div>
         <footer className="menu-footer">
           <div>
-            <a href="mailto:cycylia_24@students.unnes.ac.id">
+            <a href="mailto:suvifor.unnes17@gmail.com">
               suvifor.unnes17@gmail.com
             </a>
             <a href="https://wa.me/6281244091033">+62 812 4409 1033</a>
@@ -237,13 +237,21 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
             >
-              Instagram (@suvifor)
+              Instagram
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              LinkedIn (Suvifor Unnes)
+            <a
+              href="https://www.linkedin.com/in/suvifor-unnes-8a4463365/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer">
-              YouTube (@suvifor)
+            <a
+              href="https://www.tiktok.com/@suvifor"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Tiktok
             </a>
           </div>
           <div>
