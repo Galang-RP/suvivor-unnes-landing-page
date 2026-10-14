@@ -32,7 +32,7 @@ const timelineItems = [
   {
     date: "FEBRUARI 2027",
     phase: "TAHAP 05",
-    title: "PERSIAPAN EKNOFEST",
+    title: "PERSIAPAN TEKNOFEST",
     description:
     "Festival kedirgantaraan dan teknologi internasional di Turki, wadah unjuk kebolehan inovasi wahana nirawak serta riset tingkat global.",
   },
