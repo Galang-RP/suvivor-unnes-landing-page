@@ -1,22 +1,22 @@
 # Product Requirements Document (PRD) — Internal
 
 | Item                    | Detail                                    |
-| ----------------------- | ----------------------------------------- |
+| ----------------------- | ----------------------------------------- | --------------------------------- | --- |
 | **Nama Produk**         | SUVIFOR UNNES — UAV Research Team Website |
-| **Versi Dokumen**       | v0.1                                      |
+| **Versi Dokumen**       | v1.0                                      |
 | **Status**              | Draft                                     |
-| **Penulis**             | **[Nama Anda]**                           |
-| **Product Owner**       | **[Ketua UKM RIPTEK]**                    |
-| **Project Manager**     | **[KOSONGKAN]**                           |
-| **Tanggal Dibuat**      | **[DD-MM-YYYY]**                          |
-| **Terakhir Diperbarui** | **[DD-MM-YYYY]**                          |
-| **Dokumen Terkait**     | PRD Eksternal — [tautan jika ada]         |
+| <!--                    | **Penulis**                               | **[Nama Anda]**                   | --> |
+| <!--                    | **Product Owner**                         | **[Ketua UKM RIPTEK]**            | --> |
+| **Project Manager**     | **[Galang Radit Perdana]**                |
+| **Tanggal Dibuat**      | **[09-10-2026]**                          |
+| **Terakhir Diperbarui** | **[14-10-2026]**                          |
+| <!--                    | **Dokumen Terkait**                       | PRD Eksternal — [tautan jika ada] | --> |
 
-### Riwayat Perubahan
+<!-- ### Riwayat Perubahan
 
 | Versi | Tanggal          | Penulis         | Perubahan  |
 | ----- | ---------------- | --------------- | ---------- |
-| v0.1  | **[DD-MM-YYYY]** | **[Nama Anda]** | Draft awal |
+| v1.0  | **[09-10-2026]** | **[Makiv]** | Draft awal | -->
 
 ---
 
