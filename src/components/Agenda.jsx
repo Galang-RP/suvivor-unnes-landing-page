@@ -4,23 +4,44 @@ const timelineItems = [
   {
     date: "OKTOBER 2026",
     phase: "TAHAP 01",
+    title: "ORIENTASI ROBOTIKA",
+    description:
+      "Kegiatan yang bertujuan untuk memperkenalkan suvifor (KRTI) dan reactor (KRI) dan juga demo wahana.",
+  },
+  {
+    date: "NOVEMBER 2026",
+    phase: "TAHAP 02",
+    title: "ROBOTIC SCHOOL ",
+    description:
+      "Pengenalan dunia robotika penerbangan dan wahana terbang tanpa awak (UAV) serta wadah pengembangan skill teknikal bagi mahasiswa.",
+  },
+  {
+    date: "DESEMBER 2026",
+    phase: "TAHAP 03",
     title: "OPEN RECRUITMENT",
     description:
       "Regenerasi anggota baru mahasiswa UNNES semester 2 dan 4 untuk divisi mekanik, elektrik, dan software.",
   },
   {
-    date: "NOVEMBER 2026",
-    phase: "TAHAP 02",
-    title: "ROBOTIC SCHOOL & PENDAS",
+    date: "JANUARI 2027",
+    phase: "TAHAP 04",
+    title: "PENDAS",
     description:
-      "Pelatihan intensif aerodinamika, perancangan, avionika, dan uji terbang prototipe secara langsung di lapangan.",
+    "Pelatihan awal komprehensif dan praktik langsung dalam merancang aerodinamika, perakitan avionik, serta uji terbang prototipe di lapangan.",
   },
   {
-    date: "DESEMBER 2026",
-    phase: "TAHAP 03",
-    title: "SELEKSI & PERSIAPAN KRTI / TEKNOFEST",
+    date: "FEBRUARI 2027",
+    phase: "TAHAP 05",
+    title: "PERSIAPAN EKNOFEST",
     description:
-      "Pembentukan kontingen resmi divisi Racing Plane, Fixed Wing, dan VTOL untuk persiapan kontes kedirgantaraan nasional dan internasional.",
+    "Festival kedirgantaraan dan teknologi internasional di Turki, wadah unjuk kebolehan inovasi wahana nirawak serta riset tingkat global.",
+  },
+  {
+    date: "MARET - SEPTEMBER 2027",
+    phase: "TAHAP 06",
+    title: "KRTI",
+    description:
+    "Kompetisi UAV bergengsi tingkat nasional oleh Belmawa Kemendiktisaintek mencakup divisi Racing Plane, Fixed Wing, dan Vertical Take-Off Landing (VTOL).",
   },
 ];
 

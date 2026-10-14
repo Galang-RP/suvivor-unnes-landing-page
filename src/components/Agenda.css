@@ -160,6 +160,8 @@
 }
 
 .agenda-timeline-phase {
+  display: block;
+  margin: 8px 0 0;
   color: #CCC5B2;
   font: 400 11px/1 var(--font-mono);
   letter-spacing: 0.1em;

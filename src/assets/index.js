@@ -14,26 +14,26 @@ import teknofest from "./images/teknofest.jpg";
 export const assets = {
   "grand-launching-1": {
     src: grand_launching_1,
-    width: 1600,
-    height: 1067,
+    width: 1200,
+    height: 800,
     alt: "Presentasi pada acara Grand Launching SUVIFOR",
   },
   "grand-launching-2": {
     src: grand_launching_2,
-    width: 1600,
-    height: 1067,
+    width: 1200,
+    height: 800,
     alt: "Foto bersama tim pada Grand Launching SUVIFOR",
   },
   "grand-launching-3": {
     src: grand_launching_3,
-    width: 1600,
-    height: 1067,
+    width: 1200,
+    height: 800,
     alt: "Acara Grand Launching dan doa bersama KRTI",
   },
   krti: {
     src: krti,
-    width: 960,
-    height: 1280,
+    width: 900,
+    height: 1200,
     alt: "Tim SUVIFOR bersama pesawat pada Kontes Robot Terbang Indonesia",
   },
   "open-recruitment-1": {
@@ -50,8 +50,8 @@ export const assets = {
   },
   "pendas-1": {
     src: pendas_1,
-    width: 1600,
-    height: 1200,
+    width: 1200,
+    height: 900,
     alt: "Peserta pendidikan dasar SUVIFOR bersama wahana UAV di lapangan",
   },
   "pendas-3": {
@@ -62,26 +62,26 @@ export const assets = {
   },
   "robotic-school-1": {
     src: robotic_school_1,
-    width: 1600,
-    height: 899,
+    width: 1200,
+    height: 674,
     alt: "Peserta mengikuti kegiatan Robotic School SUVIFOR",
   },
   "robotic-school-2": {
     src: robotic_school_2,
-    width: 1600,
-    height: 899,
+    width: 1200,
+    height: 674,
     alt: "Pemaparan materi dalam Robotic School SUVIFOR",
   },
   "suvifor-logo": {
     src: suvifor_logo,
-    width: 817,
-    height: 817,
+    width: 512,
+    height: 512,
     alt: "Logo SUVIFOR UNNES",
   },
   teknofest: {
     src: teknofest,
-    width: 1600,
-    height: 900,
+    width: 512,
+    height: 341,
     alt: "TEKNOFEST International Competition SUVIFOR",
   },
 };
