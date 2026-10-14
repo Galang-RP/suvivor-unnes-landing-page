@@ -37,7 +37,7 @@ export default function Footer() {
             •
           </span>
           <a
-            href="https://riptek.unnes.ac.id"
+            href="https://unnes.ac.id/tim-robotik-unnes-kembangkan-3-model-drone-militer/ukm-riptek/"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -4,10 +4,14 @@ import WorkPrograms from "../components/WorkPrograms.jsx";
 import Agenda from "../components/Agenda.jsx";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.jsx";
+import { useRef } from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 export default function HomePage() {
+  const pageRef = useRef(null);
+  useScrollReveal(pageRef);
   return (
-    <>
+    <div ref={pageRef}>
       <main>
         <Hero />
         <About />
@@ -16,6 +20,6 @@ export default function HomePage() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

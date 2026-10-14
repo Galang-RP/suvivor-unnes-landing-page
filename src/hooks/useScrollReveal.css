@@ -1,0 +1,82 @@
+/* Different motion for each content type; exits never wait for stagger delays. */
+.scroll-reveal {
+  --reveal-x: 0px;
+  --reveal-y: 24px;
+  --reveal-angle: 0deg;
+  --reveal-scale: 1;
+  --reveal-clip: inset(-8px);
+  --reveal-delay: 0ms;
+  opacity: 0;
+  translate: var(--reveal-x) var(--reveal-y);
+  rotate: var(--reveal-angle);
+  scale: var(--reveal-scale);
+  clip-path: var(--reveal-clip);
+  transition: opacity .3s ease, translate .45s ease, rotate .45s ease,
+    scale .45s ease, clip-path .45s ease;
+}
+.hero-copy h1 span.scroll-reveal, .about-intro.scroll-reveal,
+.work-programs-header.scroll-reveal, .contact-header.scroll-reveal {
+  --reveal-x: -28px;
+  --reveal-y: 0px;
+  --reveal-clip: inset(0 98% 0 0);
+}
+.hero-copy h1 span:nth-child(2) { --reveal-delay: 140ms; }
+.hero-badge.scroll-reveal, .about-label.scroll-reveal, .work-programs-label.scroll-reveal {
+  --reveal-scale: .88;
+  --reveal-angle: -3deg;
+  --reveal-y: 0px;
+  transform-origin: left center;
+}
+.hero-visual.scroll-reveal {
+  --reveal-clip: inset(48% 0 48% 0);
+  --reveal-y: 0px;
+}
+.about-photo.scroll-reveal {
+  --reveal-clip: inset(0 0 98% 0);
+  --reveal-y: 0px;
+}
+.about-focus article.scroll-reveal, .work-program-card.scroll-reveal {
+  --reveal-y: 36px;
+  --reveal-angle: 2deg;
+  --reveal-scale: .96;
+  transform-origin: center bottom;
+}
+.about-focus article:nth-child(2), .work-program-card:nth-child(3n + 2) { --reveal-delay: 90ms; }
+.about-focus article:nth-child(3), .work-program-card:nth-child(3n) { --reveal-delay: 180ms; }
+.work-program-card:nth-child(even) { --reveal-angle: -2deg; }
+.agenda-timeline-item.scroll-reveal {
+  --reveal-x: 36px;
+  --reveal-y: 0px;
+  --reveal-clip: inset(0 98% 0 0);
+}
+.contact-actions.scroll-reveal { --reveal-scale: .94; }
+
+.scroll-reveal.is-visible, .scroll-reveal:focus-within {
+  opacity: 1;
+  translate: 0 0;
+  rotate: 0deg;
+  scale: 1;
+  clip-path: inset(-8px);
+  transition-duration: .6s, .85s, .85s, .85s, 1s;
+  transition-timing-function: cubic-bezier(.16, 1, .3, 1);
+  transition-delay: var(--reveal-delay);
+}
+.scroll-reveal:focus-within { clip-path: none; transition-delay: 0ms; }
+/* Wide display-font glyphs must remain intact throughout the contact entrance. */
+.contact-header.scroll-reveal { clip-path: none; }
+@media (max-width: 640px) {
+  .scroll-reveal {
+    --reveal-x: 0px !important;
+    --reveal-y: 12px !important;
+    --reveal-angle: 0deg !important;
+    --reveal-delay: 0ms !important;
+  }
+  .scroll-reveal.is-visible { transition-duration: .5s; }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .scroll-reveal {
+    opacity: 1; translate: none; rotate: none; scale: none;
+    clip-path: none; transition: none;
+  }
+}
+
