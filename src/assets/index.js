@@ -11,6 +11,7 @@ import robotic_school_2 from "./images/robotic-school-2.webp";
 import suvifor_logo from "./images/suvifor-logo.webp";
 import teknofest from "./images/teknofest.jpg";
 import oprec2 from "./images/oprec2.jpg";
+import tekno_logo from "./images/teknofest-logo.jpeg";
 
 export const assets = {
   "grand-launching-1": {
@@ -90,5 +91,11 @@ export const assets = {
     width: 512,
     height: 341,
     alt: "TEKNOFEST International Competition SUVIFOR",
+  },
+  tekno_logo: {
+    src: tekno_logo,
+    width: 512,
+    height: 341,
+    alt: "Teknofest Logo",
   },
 };

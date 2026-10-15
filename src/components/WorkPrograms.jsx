@@ -53,7 +53,7 @@ const programs = [
     title: "TEKNOFEST INTERNATIONAL",
     description:
       "Festival kedirgantaraan dan teknologi internasional di Turki, wadah unjuk kebolehan inovasi wahana nirawak serta riset tingkat global.",
-    image: assets["teknofest"],
+    image: assets["tekno_logo"],
     imageAlt: "TEKNOFEST International Competition SUVIFOR",
   },
 ];
