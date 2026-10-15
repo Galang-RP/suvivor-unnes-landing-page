@@ -66,22 +66,23 @@ export default function Agenda() {
               </p>
             </div>
             <div className="agenda-actions">
-              {/* <a
-                className="agenda-button agenda-button-primary"
-                href="https://wa.me/6281244091033?text=Halo%20SUVIFOR%20UNNES,%20saya%20tertarik%20untuk%20bergabung"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>DAFTAR VIA WHATSAPP</span>
-                <span aria-hidden="true">→</span>
-              </a> */}
               <a
-                className="agenda-button agenda-button-secondary"
+                className="agenda-button agenda-button-primary"
+                // href="https://wa.me/6281244091033?text=Halo%20SUVIFOR%20UNNES,%20saya%20tertarik%20untuk%20bergabung"
                 href="https://google.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>FORMULIR ONLINE</span>
+                <span>LIHAT GUIDEBOOK</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                className="agenda-button agenda-button-secondary"
+                href="https://forms.gle/4NQwZrU69ZXgg3To7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>DAFTAR ROBOSCHOOL</span>
                 <span aria-hidden="true">↗</span>
               </a>
             </div>

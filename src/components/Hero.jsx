@@ -58,14 +58,14 @@ export default function Hero() {
           </div>
           <figure className="hero-visual">
             <div className="hero-photo-frame">
-              <div className="hero-photo-label" aria-hidden="true"><span /> FIELD LOG / 01</div>
-            <img
-              {...assets["pendas-1"]}
-              fetchPriority="high"
-              decoding="async"
-            />
+              <div className="hero-photo-label" aria-hidden="true">
+                <span /> FIELD LOG / 01
+              </div>
+              <img {...assets["hero"]} fetchPriority="high" decoding="async" />
               <div className="hero-photo-sweep" aria-hidden="true" />
-              <span className="hero-photo-crosshair" aria-hidden="true">+</span>
+              <span className="hero-photo-crosshair" aria-hidden="true">
+                +
+              </span>
             </div>
             <figcaption>
               <span>FIELD OPERATIONS / SUVIFOR UNNES</span>

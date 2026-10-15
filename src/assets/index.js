@@ -12,6 +12,8 @@ import suvifor_logo from "./images/suvifor-logo.webp";
 import teknofest from "./images/teknofest.jpg";
 import oprec2 from "./images/oprec2.jpg";
 import tekno_logo from "./images/teknofest-logo.jpeg";
+import hero from "./images/hero.jpeg";
+import about from "./images/about.jpeg";
 
 export const assets = {
   "grand-launching-1": {
@@ -97,5 +99,17 @@ export const assets = {
     width: 512,
     height: 341,
     alt: "Teknofest Logo",
+  },
+  hero: {
+    src: hero,
+    width: 1200,
+    height: 900,
+    alt: "Peserta pendidikan dasar SUVIFOR bersama wahana UAV di lapangan",
+  },
+  about: {
+    src: about,
+    width: 1200,
+    height: 800,
+    alt: "Foto bersama tim pada Grand Launching SUVIFOR",
   },
 };
