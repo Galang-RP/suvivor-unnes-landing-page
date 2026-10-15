@@ -17,7 +17,7 @@ const programs = [
     title: "OPEN RECRUITMENT",
     description:
       "Regenerasi anggota baru SUVIFOR yang diperuntukkan bagi mahasiswa UNNES semester 2 dan 4 dalam divisi mekanik, elektrik, serta software.",
-    image: assets["open-recruitment-2"],
+    image: assets["oprec2"],
     imageAlt: "Open Recruitment SUVIFOR UNNES",
   },
   {

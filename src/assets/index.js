@@ -10,6 +10,7 @@ import robotic_school_1 from "./images/robotic-school-1.webp";
 import robotic_school_2 from "./images/robotic-school-2.webp";
 import suvifor_logo from "./images/suvifor-logo.webp";
 import teknofest from "./images/teknofest.jpg";
+import oprec2 from "./images/oprec2.jpg";
 
 export const assets = {
   "grand-launching-1": {
@@ -44,6 +45,12 @@ export const assets = {
   },
   "open-recruitment-2": {
     src: open_recruitment_2,
+    width: 360,
+    height: 640,
+    alt: "Sesi kegiatan open recruitment SUVIFOR",
+  },
+  oprec2: {
+    src: oprec2,
     width: 360,
     height: 640,
     alt: "Sesi kegiatan open recruitment SUVIFOR",
