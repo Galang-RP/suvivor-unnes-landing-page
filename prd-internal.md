@@ -70,32 +70,32 @@ Mendukung visibilitas UKM RIPTEK di tingkat universitas & nasional untuk menarik
 
 ### 6.3 Anggaran
 
-| Komponen                  | Estimasi Biaya | Catatan                                                |
-| ------------------------- | -------------- | ------------------------------------------------------ |
-| Sumber daya manusia       | Rp 0           | Internal UKM                                           |
-| Infrastruktur dan lisensi | Rp 0           | Hosting gratis, font gratis, domain gratis (subdomain) |
-| Lain-lain                 | Rp 0           | -                                                      |
-| **Total**                 | **Rp 0**       |                                                        |
+| Komponen                  | Estimasi Biaya | Catatan                     |
+| ------------------------- | -------------- | --------------------------- |
+| Sumber daya manusia       | Rp 0           | Internal UKM                |
+| Infrastruktur dan lisensi | Rp 0           | Hosting gratis, font gratis |
+| Lain-lain                 | Rp 0           | -                           |
+| **Total**                 | **Rp 0**       |                             |
 
 ---
 
 ## 7. Jadwal Proyek
 
-| Fase            | Kegiatan                                       | Mulai            | Selesai          | PIC              | Status      |
-| --------------- | ---------------------------------------------- | ---------------- | ---------------- | ---------------- | ----------- |
-| 1. Discovery    | Riset dan analisis kebutuhan                   | **[08-10-2026]** | **[09-10-2026]** | **PM**           | Selesai     |
-| 2. Desain       | Wireframe dan UI/UX                            | **[08-10-2026]** | **[10-10-2026]** | **Frontend Dev** | Selesai     |
-| 3. Pengembangan | Implementasi fitur MVP                         | **[10-10-2026]** | **[12-10-2026]** | **Frontend Dev** | Selesai     |
-| 4. Pengujian    | QA, UAT, dan security testing (lihat bagian 4) | **[13-10-2026]** | **[13-10-2026]** | **Seluruh Tim**  | Selesai     |
-| 5. Rilis        | Deployment dan peluncuran                      | **[-]**          | **[-]**          | **PM + Dev**     | Belum mulai |
-| 6. Evaluasi     | Pengukuran dan retrospektif                    | **[Tanggal]**    | **[Tanggal]**    | **PM + PO**      | Belum mulai |
+| Fase            | Kegiatan                                       | Mulai            | Selesai          | PIC              | Status  |
+| --------------- | ---------------------------------------------- | ---------------- | ---------------- | ---------------- | ------- |
+| 1. Discovery    | Riset dan analisis kebutuhan                   | **[08-10-2026]** | **[09-10-2026]** | **PM**           | Selesai |
+| 2. Desain       | Wireframe dan UI/UX                            | **[08-10-2026]** | **[10-10-2026]** | **Frontend Dev** | Selesai |
+| 3. Pengembangan | Implementasi fitur MVP                         | **[10-10-2026]** | **[13-10-2026]** | **Frontend Dev** | Selesai |
+| 4. Pengujian    | QA, UAT, dan security testing (lihat bagian 4) | **[13-10-2026]** | **[13-10-2026]** | **Seluruh Tim**  | Selesai |
+| 5. Rilis        | Deployment dan peluncuran                      | **[14-10-2026]** | **[14-10-2026]** | **PM + Dev**     | Selesai |
+| 6. Evaluasi     | Pengukuran dan retrospektif                    | **[14-10-2026]** | **[15-10-2026]** | **PM + PO**      | Selesai |
 
 ---
 
 ## Persetujuan Dokumen
 
-| Nama                       | Peran           | Tanda Tangan / Persetujuan | Tanggal |
-| -------------------------- | --------------- | -------------------------- | ------- |
-| **[Galang Radit Perdana]** | Project Manager |                            |         |
-| **[Nama]**                 | **PIC ORMAWA**  |                            |         |
-| **[Nama]**                 | Tech Lead       |                            |         |
+| Nama                        | Peran           | Tanda Tangan / Persetujuan | Tanggal |
+| --------------------------- | --------------- | -------------------------- | ------- |
+| **[Galang Radit Perdana]**  | Project Manager |                            |         |
+| **[Cycylia Kusumawardani]** | **PIC ORMAWA**  |                            |         |
+| **[Nama]**                  | Tech Lead       |                            |         |
